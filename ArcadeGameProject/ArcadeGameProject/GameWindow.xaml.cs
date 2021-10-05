@@ -26,25 +26,33 @@ namespace ArcadeGameProject
         private Random rand = new Random();
         private List<Enemies> EnemiesOnScreen = new List<Enemies>();
 
-        public int Innerwall = 640;
-        public int outerwall = 1280;
-        public int EnemySpeed = 10;
-        private int enemySpawnCounter = 50;
-        private int EnemySpawnLimit = 50;
+        private Enemytype SpawnType;
+
         private const double cHeight = 960;
-        private int Time;
+
         private const int playerSpeed = 10;
         private const int bulletSpeed = 20;
+
+        private int Innerwall = 640;
+        private int outerwall = 1280;
+        private int EnemySpeed = 10;
+        private int enemySpawnCounter = 50;
+        private int EnemySpawnLimit = 50;
+        private int Time;
+        private int seconds;
+        private int Backgroundseconds;
+        private int minutes;
         private int scoreP1=0;
         private int scoreP2=0;
 
-        private bool moveLeft1, moveRight1, moveLeft2, moveRight2;
+        private bool moveLeft1, moveRight1, moveLeft2, moveRight2, Enemyspawn;
         # endregion
 
         public GameWindow()
         {
             InitializeComponent();
             MyCanvas.Focus();
+
             //timer setup
             gameTimer.Interval = TimeSpan.FromMilliseconds(20);
             gameTimer.Tick += GameEngine;
@@ -105,6 +113,26 @@ namespace ArcadeGameProject
 
         public void GameEngine(object sender, EventArgs e)
         {
+            #region timer 
+            Time++;
+            if (Time == 50)
+            {
+                //de gameengine wordt elke 0,02 seconde afgespeeld, en 50 * 0,02 = 1 seconde
+                seconds++;
+                Backgroundseconds++;
+                Time = 0;
+            }
+            if (seconds == 60)
+            {
+                //60 seconde = 1minuut
+                minutes++;
+                seconds = 0;
+            }
+
+            Timer.Content = minutes + " : " + seconds;
+
+            #endregion
+
             #region movement players
             if (moveLeft1 && Canvas.GetLeft(Player1) > 0)
             {
@@ -124,23 +152,48 @@ namespace ArcadeGameProject
             }
             #endregion
 
-            #region enemiesmovement & spawning
-            // de Time variable zorgt voor een nummer die de tijd kan weergeven in een vorm en dus een if statement mee gedaan kan worden
-            Time++;
+            #region EnemySpawning
             enemySpawnCounter--;
-            if (enemySpawnCounter < 0)
+            //background seconds is de totale secondes die voorbij zijn;
+            if (Backgroundseconds >= 0 && Backgroundseconds <= 2)
             {
-                CreateEnemy(0, Innerwall, Enemytype.Enemy1, side.left); //make enemies for player1
-                CreateEnemy(Innerwall, outerwall, Enemytype.Enemy1, side.right); //makes enemies for player 2
-                enemySpawnCounter = EnemySpawnLimit; //reset the enemy counter to the limit integer
-                if(Time >= 500)
+                ScreenMessage.Content = "Start Wave 1";
+                Enemyspawn = false;
+                enemySpawnCounter = 0;
+            }
+            else if (Backgroundseconds >= 2 && Backgroundseconds <= 32)
+            {
+                ScreenMessage.Content = "";
+                SpawnType = Enemytype.Enemy1;
+                Enemyspawn = true;
+            }
+            else if (Backgroundseconds >= 32 && Backgroundseconds <= 34)
+            {
+                ScreenMessage.Content = "Start Wave 2";
+                Enemyspawn = false;
+                enemySpawnCounter = 0;
+            }
+            else if (Backgroundseconds >= 34)
+            {
+                ScreenMessage.Content = "";
+                SpawnType = Enemytype.Enemy2;
+                Enemyspawn = true;
+            }
+
+            if(Enemyspawn == true) //er wordt gekeken of er enmies gespawnd kunnen worden;
+            {
+                if (enemySpawnCounter < 0)
                 {
-                    CreateEnemy(0, Innerwall, Enemytype.Enemy2, side.left); //make enemies for player1
-                    CreateEnemy(Innerwall, outerwall, Enemytype.Enemy2, side.right); //makes enemies for player 2
+                    CreateEnemy(0, Innerwall, SpawnType, side.left); //make enemies for player1
+                    CreateEnemy(Innerwall, outerwall, SpawnType, side.right); //makes enemies for player 2
+                    enemySpawnCounter = EnemySpawnLimit; //reset the enemy counter to the limit integer
                 }
             }
+            #endregion
+
+            #region enemiesmovement
             //de reden voor de for-loop inplaats van de foreach is omdat de count van de enemiesonscreen list verandert in de loop, door dat er wat wordt verwijderd, wat een foreach niet aan kan en een for loop wel 
-            for(int i = 0; i< EnemiesOnScreen.Count; i++)
+            for (int i = 0; i< EnemiesOnScreen.Count; i++)
             {
                 Canvas.SetTop(EnemiesOnScreen[i].rectangle, Canvas.GetTop(EnemiesOnScreen[i].rectangle) + EnemySpeed);
 
@@ -176,11 +229,19 @@ namespace ArcadeGameProject
                     if (EnemiesOnScreen[i].WhichSide == side.left)
                     {
                         scoreP1 = scoreP1 - (EnemiesOnScreen[i].score / 2);
+                        if (scoreP1 < 0)
+                        {
+                            scoreP1 = 0;
+                        }
                         ScoreP1.Content = scoreP1;
                     }
                     else if (EnemiesOnScreen[i].WhichSide == side.right)
                     {
                         scoreP2 = scoreP2 - (EnemiesOnScreen[i].score/2);
+                        if (scoreP2 < 0)
+                        {
+                            scoreP2 = 0;
+                        }
                         ScoreP2.Content = scoreP2;
                     }
                     // de reden waarom we remove doen in de list is omdat de score dan gaat glitchen en niet meer correct doet
@@ -300,3 +361,4 @@ namespace ArcadeGameProject
         }
     }
 }
+
