@@ -125,7 +125,7 @@ namespace ArcadeGameProject {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ArcadeGameProject_prohczo4_wpftmp;component/gamewindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ArcadeGameProject;component/gamewindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\GameWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

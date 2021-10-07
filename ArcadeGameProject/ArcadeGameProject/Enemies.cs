@@ -20,6 +20,8 @@ namespace ArcadeGameProject
         public int score;
         public side WhichSide;
         public int bulletcount;
+        public int speed;
+        public int sidespeed;
         //public int HitTime;
         
     }

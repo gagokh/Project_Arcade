@@ -35,7 +35,6 @@ namespace ArcadeGameProject
 
         private int Innerwall = 640;
         private int outerwall = 1280;
-        private int EnemySpeed = 10;
         private int enemySpawnCounter = 50;
         private int EnemySpawnLimit = 50;
         private int Time;
@@ -63,6 +62,15 @@ namespace ArcadeGameProject
             ScoreP2.Content = scoreP2;
         }
 
+
+        /// <summary>
+        /// de methode die ervoor zorgt dat zodra een key wordt ingedrukt er een actie true wordt gezet die in de gamengine wordt verwerkt.
+        /// de volgende keys zijn gebruikt:
+        /// speler 1 : a voor links, d voor rechts
+        /// speler 2 : pijl links, pijl rechts
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.A)
@@ -83,6 +91,16 @@ namespace ArcadeGameProject
             }
         }
 
+        /// <summary>
+        /// de methode die ervoor zorgt dat na het een key is ingedrukt en losgelaten er een actie true/false wordt gezet die in de gamengine wordt verwerkt
+        /// de volgende keys zijn gebruikt:
+        /// speler 1 : a voor links, d voor rechts worden false gezet want bewegen stopt
+        /// speler 1 : w is voor schieten die een nieuwe bullet aanmaakt
+        /// speler 2 : pijl links, pijl rechts worden false gezet want bewegen stopt
+        /// speler 2 : pijl up is voor schieten die een nieuwe bullet aanmaakt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnKeyUp(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.A)
@@ -111,6 +129,15 @@ namespace ArcadeGameProject
             }
         }
 
+        /// <summary>
+        /// de gameengine die elke 0,02 seconde wordt aangeroepen, waarin :
+        /// alle movement van de spelers en enemies wordt aangepast/ weergegeven in de canvas. 
+        /// de collision(raken) van bullet en enemy en bullet(enemytype3) en de player wordt bepaald.
+        /// de scores van beide spelers wordt bepaald 
+        /// de timer die de waves beinvloedt en bepaalt wordt berekent
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void GameEngine(object sender, EventArgs e)
         {
             #region timer 
@@ -164,7 +191,7 @@ namespace ArcadeGameProject
             else if (Backgroundseconds >= 2 && Backgroundseconds <= 32)
             {
                 ScreenMessage.Content = "";
-                SpawnType = Enemytype.Enemy3; // test type 3
+                SpawnType = Enemytype.Enemy1;
                 Enemyspawn = true;
             }
             else if (Backgroundseconds >= 32 && Backgroundseconds <= 34)
@@ -207,51 +234,55 @@ namespace ArcadeGameProject
             //de reden voor de for-loop inplaats van de foreach is omdat de count van de enemiesonscreen list verandert in de loop, door dat er wat wordt verwijderd, wat een foreach niet aan kan en een for loop wel 
             for (int i = 0; i< EnemiesOnScreen.Count; i++)
             {
-                Canvas.SetTop(EnemiesOnScreen[i].rectangle, Canvas.GetTop(EnemiesOnScreen[i].rectangle) + EnemySpeed);
+                Canvas.SetTop(EnemiesOnScreen[i].rectangle, Canvas.GetTop(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].speed);
 
                 //checkt of enemy type 2 is en dus de horizontale movement bepaald
                 if (EnemiesOnScreen[i].enemyType == Enemytype.Enemy2)
                 {
 
-                    int a = rand.Next(1, 10);
+                    //int a = rand.Next(1, 10);
 
-                    if (Canvas.GetLeft(EnemiesOnScreen[i].rectangle) >= EnemiesOnScreen[i].InWall && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) <= EnemiesOnScreen[i].InWall + EnemySpeed)
+                    if (Canvas.GetLeft(EnemiesOnScreen[i].rectangle) >= EnemiesOnScreen[i].InWall && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) <= EnemiesOnScreen[i].InWall + EnemiesOnScreen[i].sidespeed)
                     {
                         EnemiesOnScreen[i].ToRight = true;
                         EnemiesOnScreen[i].ToLeft = false;
-                        Canvas.SetLeft(EnemiesOnScreen[i].rectangle, Canvas.GetLeft(EnemiesOnScreen[i].rectangle) + EnemySpeed);
+                        Canvas.SetLeft(EnemiesOnScreen[i].rectangle, Canvas.GetLeft(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].sidespeed);
                     }
-                    else if (Canvas.GetLeft(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].rectangle.Width <= EnemiesOnScreen[i].OutWall && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].rectangle.Width >= EnemiesOnScreen[i].OutWall - EnemySpeed)
+                    else if (Canvas.GetLeft(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].rectangle.Width <= EnemiesOnScreen[i].OutWall && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].rectangle.Width >= EnemiesOnScreen[i].OutWall - EnemiesOnScreen[i].sidespeed)
                     {
                         EnemiesOnScreen[i].ToRight = false;
                         EnemiesOnScreen[i].ToLeft = true;
-                        Canvas.SetLeft(EnemiesOnScreen[i].rectangle, Canvas.GetLeft(EnemiesOnScreen[i].rectangle) - EnemySpeed);
+                        Canvas.SetLeft(EnemiesOnScreen[i].rectangle, Canvas.GetLeft(EnemiesOnScreen[i].rectangle) - EnemiesOnScreen[i].sidespeed);
                     }
-                    else if (EnemiesOnScreen[i].ToRight == true && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].rectangle.Width <= EnemiesOnScreen[i].OutWall - EnemySpeed && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) >= EnemiesOnScreen[i].InWall + EnemySpeed)
+                    else if (EnemiesOnScreen[i].ToRight == true && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].rectangle.Width <= EnemiesOnScreen[i].OutWall - EnemiesOnScreen[i].sidespeed && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) >= EnemiesOnScreen[i].InWall + EnemiesOnScreen[i].sidespeed)
                     {
-                        Canvas.SetLeft(EnemiesOnScreen[i].rectangle, Canvas.GetLeft(EnemiesOnScreen[i].rectangle) + EnemySpeed);
+                        Canvas.SetLeft(EnemiesOnScreen[i].rectangle, Canvas.GetLeft(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].sidespeed);
+                       /* 
                         if (a == 1)
                         {
                             EnemiesOnScreen[i].ToLeft = true;
                             EnemiesOnScreen[i].ToRight = false;
                         }
+                       */
 
                     }
-                    else if (EnemiesOnScreen[i].ToLeft == true && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].rectangle.Width <= EnemiesOnScreen[i].OutWall - EnemySpeed && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) >= EnemiesOnScreen[i].InWall + EnemySpeed)
+                    else if (EnemiesOnScreen[i].ToLeft == true && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].rectangle.Width <= EnemiesOnScreen[i].OutWall - EnemiesOnScreen[i].sidespeed && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) >= EnemiesOnScreen[i].InWall + EnemiesOnScreen[i].sidespeed)
                     {
-                        Canvas.SetLeft(EnemiesOnScreen[i].rectangle, Canvas.GetLeft(EnemiesOnScreen[i].rectangle) - EnemySpeed);
-                        if (a == 2)
-                        {
-                            EnemiesOnScreen[i].ToRight = true;
-                            EnemiesOnScreen[i].ToLeft = false;
-                        }
-                        
+                        Canvas.SetLeft(EnemiesOnScreen[i].rectangle, Canvas.GetLeft(EnemiesOnScreen[i].rectangle) - EnemiesOnScreen[i].sidespeed);
+                       /* 
+                       if (a == 2)
+                       {
+                           EnemiesOnScreen[i].ToRight = true;
+                           EnemiesOnScreen[i].ToLeft = false;
+                       }
+                       */
+
                     }
                 }
 
                 if (EnemiesOnScreen[i].enemyType == Enemytype.Enemy3)
                 {
-                    if (EnemiesOnScreen[i].bulletcount >= 30)
+                    if (EnemiesOnScreen[i].bulletcount >= 40)
                     {
                         CreateBullet(EnemiesOnScreen[i].rectangle);
                         EnemiesOnScreen[i].bulletcount = 0;
@@ -338,14 +369,14 @@ namespace ArcadeGameProject
                             Rect player = new Rect(Canvas.GetLeft(Player1), Canvas.GetTop(Player1), Player1.Width, Player1.Height);
                             if (bullet.IntersectsWith(player))
                             {
-                                itemsToRemove.Add(x); //bullet
-                                /* scoreP1 = scoreP1 - (EnemiesOnScreen[i].score / 2);
+                                scoreP1 = scoreP1 - (EnemiesOnScreen[i].score / 5);
                                 if (scoreP1 < 0)
                                 {
                                     scoreP1 = 0;
                                 }
                                 ScoreP1.Content = scoreP1;
-                                */
+                                itemsToRemove.Add(x); //bullet
+                                break;
                             }
                         }
                         else if (Canvas.GetLeft(x) >= Innerwall && Canvas.GetLeft(x) + x.Width <= outerwall)
@@ -353,14 +384,14 @@ namespace ArcadeGameProject
                             Rect player = new Rect(Canvas.GetLeft(Player2), Canvas.GetTop(Player2), Player2.Width, Player2.Height);
                             if (bullet.IntersectsWith(player))
                             {
-                                itemsToRemove.Add(x); //bullet
-                                /*scoreP2 = scoreP2 - (EnemiesOnScreen[i].score / 2);
+                                scoreP2 = scoreP2 - (EnemiesOnScreen[i].score / 5);
                                 if (scoreP2 < 0)
                                 {
                                     scoreP2 = 0;
                                 }
                                 ScoreP2.Content = scoreP2;
-                                */
+                                itemsToRemove.Add(x); //bullet
+                                break;
                             }
                         }
                     }
@@ -376,7 +407,13 @@ namespace ArcadeGameProject
             }
         }
 
-        //maakt een nieuwe enemy script aan om daar in de waardes in te bewaren voor locatie, type, welke spelers kant de enemy zit
+        /// <summary>
+        /// Deze functie/method zorgt voort het creeren van een nieuwe enemy class, waaronder ook de start locatie en de richting(als hij horizontaal beweegt) wordt randombepaald
+        /// </summary>
+        /// <param name="wallLeft">deze parameter zorgt voor de uiterste linker kant van de enemy waarin hij zich bevindt </param>
+        /// <param name="wallRight">deze parameter zorgt voor de uiterste linker kant van de enemy waarin hij zich bevindt </param>
+        /// <param name="enemytype">deze parameter zorgt voor het type enemy waaraan we kunnen if statements kunnen plakken zodat specifieke types spefieke dingen doen</param>
+        /// <param name="side">deze parameter zorgt er voor dat de enemy de juiste score aan de juiste player geeft </param>
         public void CreateEnemy(int wallLeft, int wallRight, Enemytype enemytype, side side)
         {
             //de rectangle van enemy wordt hier gemaakt 
@@ -401,6 +438,7 @@ namespace ArcadeGameProject
             enemy.InWall = wallLeft;
             enemy.OutWall = wallRight;
             enemy.WhichSide = side;
+            //randommiser die bepaalt welke kant de enemy opgaat
             int a = rand.Next(1, 3);
             if (a == 1)
             {
@@ -413,20 +451,31 @@ namespace ArcadeGameProject
                 enemy.ToLeft = false;
             }
 
-            //zet de score voor het type enemy en voegt toe aan de lijst van enemiesonscreen
+            //zet de score en speed voor het type enemy en voegt toe aan de lijst van enemiesonscreen (zou eventueel via een database kunnen maar voor nu doe ik het hier)
             if(enemytype == Enemytype.Enemy1)
             {
                 enemy.score = 100;
+                enemy.speed = 10;
             }
             else if (enemytype == Enemytype.Enemy2)
             {
                 enemy.score = 250;
+                enemy.speed = 10;
+                enemy.sidespeed = 10;
+            }
+            else if (enemytype == Enemytype.Enemy3)
+            {
+                enemy.score = 500;
+                enemy.speed = 5;
             }
             EnemiesOnScreen.Add(enemy);
 
         }
 
-        //maakt een bullet die afhankelijk is van de positie speler die shiet
+        /// <summary>
+        /// de bullet creation method die een nieuwe rectangle maakt in de canvas, van de schieters locatie.
+        /// </summary>
+        /// <param name="player"> dit is de parameter die bepaalt wie schiet en van welk punt</param>
         public void CreateBullet(Rectangle player)
         {
             if (player == Player1 || player == Player2)
