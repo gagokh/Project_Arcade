@@ -164,7 +164,7 @@ namespace ArcadeGameProject
             else if (Backgroundseconds >= 2 && Backgroundseconds <= 32)
             {
                 ScreenMessage.Content = "";
-                SpawnType = Enemytype.Enemy1;
+                SpawnType = Enemytype.Enemy3; // test type 3
                 Enemyspawn = true;
             }
             else if (Backgroundseconds >= 32 && Backgroundseconds <= 34)
@@ -179,8 +179,20 @@ namespace ArcadeGameProject
                 SpawnType = Enemytype.Enemy2;
                 Enemyspawn = true;
             }
+            else if (Backgroundseconds >= 64 && Backgroundseconds <= 66)
+            {
+                ScreenMessage.Content = "Start Wave 3";
+                Enemyspawn = false;
+                enemySpawnCounter = 0;
+            }
+            else if (Backgroundseconds >= 66)
+            {
+                ScreenMessage.Content = "";
+                SpawnType = Enemytype.Enemy3;
+                Enemyspawn = true;
+            }
 
-            if(Enemyspawn == true) //er wordt gekeken of er enmies gespawnd kunnen worden;
+            if (Enemyspawn == true) //er wordt gekeken of er enmies gespawnd kunnen worden;
             {
                 if (enemySpawnCounter < 0)
                 {
@@ -200,6 +212,9 @@ namespace ArcadeGameProject
                 //checkt of enemy type 2 is en dus de horizontale movement bepaald
                 if (EnemiesOnScreen[i].enemyType == Enemytype.Enemy2)
                 {
+
+                    int a = rand.Next(1, 10);
+
                     if (Canvas.GetLeft(EnemiesOnScreen[i].rectangle) >= EnemiesOnScreen[i].InWall && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) <= EnemiesOnScreen[i].InWall + EnemySpeed)
                     {
                         EnemiesOnScreen[i].ToRight = true;
@@ -215,15 +230,42 @@ namespace ArcadeGameProject
                     else if (EnemiesOnScreen[i].ToRight == true && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].rectangle.Width <= EnemiesOnScreen[i].OutWall - EnemySpeed && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) >= EnemiesOnScreen[i].InWall + EnemySpeed)
                     {
                         Canvas.SetLeft(EnemiesOnScreen[i].rectangle, Canvas.GetLeft(EnemiesOnScreen[i].rectangle) + EnemySpeed);
+                        if (a == 1)
+                        {
+                            EnemiesOnScreen[i].ToLeft = true;
+                            EnemiesOnScreen[i].ToRight = false;
+                        }
+
                     }
                     else if (EnemiesOnScreen[i].ToLeft == true && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].rectangle.Width <= EnemiesOnScreen[i].OutWall - EnemySpeed && Canvas.GetLeft(EnemiesOnScreen[i].rectangle) >= EnemiesOnScreen[i].InWall + EnemySpeed)
                     {
                         Canvas.SetLeft(EnemiesOnScreen[i].rectangle, Canvas.GetLeft(EnemiesOnScreen[i].rectangle) - EnemySpeed);
+                        if (a == 2)
+                        {
+                            EnemiesOnScreen[i].ToRight = true;
+                            EnemiesOnScreen[i].ToLeft = false;
+                        }
+                        
                     }
                 }
 
-                //removal van de enemies met het optellen van punten
-                if (Canvas.GetTop(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].rectangle.Height > cHeight)
+                if (EnemiesOnScreen[i].enemyType == Enemytype.Enemy3)
+                {
+                    if (EnemiesOnScreen[i].bulletcount >= 30)
+                    {
+                        CreateBullet(EnemiesOnScreen[i].rectangle);
+                        EnemiesOnScreen[i].bulletcount = 0;
+                    }
+                    else
+                    {
+                        EnemiesOnScreen[i].bulletcount++;
+                    }
+
+                }
+
+
+                    //removal van de enemies met het optellen van punten
+                    if (Canvas.GetTop(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].rectangle.Height > cHeight)
                 {
                     itemsToRemove.Add(EnemiesOnScreen[i].rectangle);
                     if (EnemiesOnScreen[i].WhichSide == side.left)
@@ -253,7 +295,7 @@ namespace ArcadeGameProject
             #region bullets and collision
             foreach (Rectangle x in MyCanvas.Children.OfType<Rectangle>())
             {
-                if ((string)x.Tag == "Bullet")
+                if ((string)x.Tag == "BulletPlayer")
                 {
                     Canvas.SetTop(x, Canvas.GetTop(x) - bulletSpeed);
                     Rect bullet = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
@@ -280,6 +322,46 @@ namespace ArcadeGameProject
                                 ScoreP2.Content = scoreP2;
                             }
                             EnemiesOnScreen.Remove(EnemiesOnScreen[i]);
+                        }
+                    }
+                }
+
+                if ((string)x.Tag == "BulletEnemy")
+                {
+                    Canvas.SetTop(x, Canvas.GetTop(x) + bulletSpeed);
+                    Rect bullet = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+
+                    for (int i = 0; i < EnemiesOnScreen.Count; i++)
+                    {
+                        if (Canvas.GetLeft(x)>= 0 && Canvas.GetLeft(x) + x.Width <= Innerwall)
+                        {
+                            Rect player = new Rect(Canvas.GetLeft(Player1), Canvas.GetTop(Player1), Player1.Width, Player1.Height);
+                            if (bullet.IntersectsWith(player))
+                            {
+                                itemsToRemove.Add(x); //bullet
+                                /* scoreP1 = scoreP1 - (EnemiesOnScreen[i].score / 2);
+                                if (scoreP1 < 0)
+                                {
+                                    scoreP1 = 0;
+                                }
+                                ScoreP1.Content = scoreP1;
+                                */
+                            }
+                        }
+                        else if (Canvas.GetLeft(x) >= Innerwall && Canvas.GetLeft(x) + x.Width <= outerwall)
+                        {
+                            Rect player = new Rect(Canvas.GetLeft(Player2), Canvas.GetTop(Player2), Player2.Width, Player2.Height);
+                            if (bullet.IntersectsWith(player))
+                            {
+                                itemsToRemove.Add(x); //bullet
+                                /*scoreP2 = scoreP2 - (EnemiesOnScreen[i].score / 2);
+                                if (scoreP2 < 0)
+                                {
+                                    scoreP2 = 0;
+                                }
+                                ScoreP2.Content = scoreP2;
+                                */
+                            }
                         }
                     }
                 }
@@ -347,18 +429,38 @@ namespace ArcadeGameProject
         //maakt een bullet die afhankelijk is van de positie speler die shiet
         public void CreateBullet(Rectangle player)
         {
-            Rectangle newBullet = new Rectangle
+            if (player == Player1 || player == Player2)
             {
-                Tag = "Bullet",
-                Height = 20,
-                Width = 5,
-                Fill = Brushes.White,
-                Stroke = Brushes.Red
-            };
-            Canvas.SetTop(newBullet, Canvas.GetTop(player) - newBullet.Height);
-            Canvas.SetLeft(newBullet, Canvas.GetLeft(player) + player.Width / 2);
-            MyCanvas.Children.Add(newBullet);
+                Rectangle newBullet = new Rectangle
+                {
+                    Tag = "BulletPlayer",
+                    Height = 20,
+                    Width = 5,
+                    Fill = Brushes.White,
+                    Stroke = Brushes.Red
+                };
+                Canvas.SetTop(newBullet, Canvas.GetTop(player) - newBullet.Height);
+                Canvas.SetLeft(newBullet, Canvas.GetLeft(player) + player.Width / 2);
+                MyCanvas.Children.Add(newBullet);
+            }
+            else
+            {
+                Rectangle newBullet = new Rectangle
+                {
+                    Tag = "BulletEnemy",
+                    Height = 20,
+                    Width = 5,  
+                    Fill = Brushes.White,
+                    Stroke = Brushes.Red
+                };
+                Canvas.SetTop(newBullet, Canvas.GetTop(player) + player.Height + newBullet.Height);
+                Canvas.SetLeft(newBullet, Canvas.GetLeft(player) + player.Width / 2);
+                MyCanvas.Children.Add(newBullet);
+                
+            }
+
         }
+
     }
 }
 
