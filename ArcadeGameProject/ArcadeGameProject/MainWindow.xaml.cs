@@ -33,8 +33,17 @@ namespace ArcadeGameProject
         }
 
         private void OnClickExit(object sender, RoutedEventArgs e)
-        {
+        {   
+            //sluit de applicatie 
             Application.Current.Shutdown();
+        }
+
+        private void Highscorebutton_Click(object sender, RoutedEventArgs e)
+        {
+            //opent highscores 
+            HighScores HS = new HighScores();
+            HS.Visibility = Visibility.Visible;
+            //this.Visibility = Visibility.Hidden;
         }
     }
 }

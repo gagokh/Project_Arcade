@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,8 +37,8 @@ namespace ArcadeGameProject
         private int Time;
         private const int playerSpeed = 10;
         private const int bulletSpeed = 20;
-        private int scoreP1=0;
-        private int scoreP2=0;
+        private int scoreP1 = 0;
+        private int scoreP2 = 0;
 
         private bool moveLeft1, moveRight1, moveLeft2, moveRight2;
         # endregion
@@ -118,7 +120,7 @@ namespace ArcadeGameProject
             {
                 Canvas.SetLeft(Player2, Canvas.GetLeft(Player2) - playerSpeed);
             }
-            if (moveRight2 && Canvas.GetLeft(Player2) + Player2.Width < outerwall - Player2.Width *0.25)
+            if (moveRight2 && Canvas.GetLeft(Player2) + Player2.Width < outerwall - Player2.Width * 0.25)
             {
                 Canvas.SetLeft(Player2, Canvas.GetLeft(Player2) + playerSpeed);
             }
@@ -133,14 +135,14 @@ namespace ArcadeGameProject
                 CreateEnemy(0, Innerwall, Enemytype.Enemy1, side.left); //make enemies for player1
                 CreateEnemy(Innerwall, outerwall, Enemytype.Enemy1, side.right); //makes enemies for player 2
                 enemySpawnCounter = EnemySpawnLimit; //reset the enemy counter to the limit integer
-                if(Time >= 500)
+                if (Time >= 500)
                 {
                     CreateEnemy(0, Innerwall, Enemytype.Enemy2, side.left); //make enemies for player1
                     CreateEnemy(Innerwall, outerwall, Enemytype.Enemy2, side.right); //makes enemies for player 2
                 }
             }
             //de reden voor de for-loop inplaats van de foreach is omdat de count van de enemiesonscreen list verandert in de loop, door dat er wat wordt verwijderd, wat een foreach niet aan kan en een for loop wel 
-            for(int i = 0; i< EnemiesOnScreen.Count; i++)
+            for (int i = 0; i < EnemiesOnScreen.Count; i++)
             {
                 Canvas.SetTop(EnemiesOnScreen[i].rectangle, Canvas.GetTop(EnemiesOnScreen[i].rectangle) + EnemySpeed);
 
@@ -180,7 +182,7 @@ namespace ArcadeGameProject
                     }
                     else if (EnemiesOnScreen[i].WhichSide == side.right)
                     {
-                        scoreP2 = scoreP2 - (EnemiesOnScreen[i].score/2);
+                        scoreP2 = scoreP2 - (EnemiesOnScreen[i].score / 2);
                         ScoreP2.Content = scoreP2;
                     }
                     // de reden waarom we remove doen in de list is omdat de score dan gaat glitchen en niet meer correct doet
@@ -271,7 +273,7 @@ namespace ArcadeGameProject
             }
 
             //zet de score voor het type enemy en voegt toe aan de lijst van enemiesonscreen
-            if(enemytype == Enemytype.Enemy1)
+            if (enemytype == Enemytype.Enemy1)
             {
                 enemy.score = 100;
             }
