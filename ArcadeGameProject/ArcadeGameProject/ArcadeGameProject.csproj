@@ -9,6 +9,7 @@
   <ItemGroup>
     <None Remove="fonts\Audiowide-Regular.ttf" />
     <None Remove="fonts\audiowide2.ttf" />
+    <None Remove="fonts\Oswald-Regular.ttf" />
     <None Remove="images\project_arcade_bg.png" />
   </ItemGroup>
 
@@ -19,6 +20,7 @@
   <ItemGroup>
     <Resource Include="fonts\Audiowide-Regular.ttf" />
     <Resource Include="fonts\audiowide2.ttf" />
+    <Resource Include="fonts\Oswald-Regular.ttf" />
     <Resource Include="images\project_arcade_bg.png" />
   </ItemGroup>
 
