@@ -114,6 +114,12 @@ namespace ArcadeGameProject {
             return;
             case 2:
             this.Highscorebutton = ((System.Windows.Controls.Button)(target));
+            
+            #line 29 "..\..\..\MainWindow.xaml"
+            this.Highscorebutton.Click += new System.Windows.RoutedEventHandler(this.Highscorebutton_Click);
+            
+            #line default
+            #line hidden
             return;
             case 3:
             this.ExitGameButton = ((System.Windows.Controls.Button)(target));

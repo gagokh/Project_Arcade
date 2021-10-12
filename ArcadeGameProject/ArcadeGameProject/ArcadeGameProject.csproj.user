@@ -8,6 +8,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Update="GameWindow.xaml.cs">
+    <Compile Update="HighScores.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -16,6 +17,7 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+    <Page Update="HighScores.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
