@@ -66,5 +66,4 @@ D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.AssemblyInfoInputs.cache
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.AssemblyInfo.cs
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.csproj.CoreCompileInputs.cache
-D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.csproj.CopyComplete
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.genruntimeconfig.cache
