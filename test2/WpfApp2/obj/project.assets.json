@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gamer\\source\\repos\\WpfApp2\\WpfApp2\\WpfApp2.csproj",
+      "projectUniqueName": "C:\\Users\\gamer\\Desktop\\GIT\\test2\\WpfApp2\\WpfApp2.csproj",
       "projectName": "WpfApp2",
-      "projectPath": "C:\\Users\\gamer\\source\\repos\\WpfApp2\\WpfApp2\\WpfApp2.csproj",
+      "projectPath": "C:\\Users\\gamer\\Desktop\\GIT\\test2\\WpfApp2\\WpfApp2.csproj",
       "packagesPath": "C:\\Users\\gamer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gamer\\source\\repos\\WpfApp2\\WpfApp2\\obj\\",
+      "outputPath": "C:\\Users\\gamer\\Desktop\\GIT\\test2\\WpfApp2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

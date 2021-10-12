@@ -53,6 +53,20 @@ namespace ArcadeGameProject
             //score wordt gezet op 0
             ScoreP1.Content = scoreP1;
             ScoreP2.Content = scoreP2;
+
+            //achtergrond plaatje
+            ImageBrush bg = new ImageBrush();
+
+            bg.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/background1.jpg"));
+            MyCanvas.Background = bg;
+
+            ImageBrush playerimage1 = new ImageBrush();
+            playerimage1.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/player1.png"));
+            Player1.Fill = playerimage1;
+
+            ImageBrush playerimage2 = new ImageBrush();
+            playerimage2.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/player2.png"));
+            Player2.Fill = playerimage2;
         }
 
         public void OnKeyDown(object sender, KeyEventArgs e)
@@ -236,15 +250,29 @@ namespace ArcadeGameProject
         //maakt een nieuwe enemy script aan om daar in de waardes in te bewaren voor locatie, type, welke spelers kant de enemy zit
         public void CreateEnemy(int wallLeft, int wallRight, Enemytype enemytype, side side)
         {
-            //de rectangle van enemy wordt hier gemaakt 
+            
+            
+            int a = rand.Next(1, 3);
+           
+            ImageBrush vijanden = new ImageBrush();
+            switch (a)
+            {
+                case 1:
+                    vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/player3.png"));
+                    break;
+                case 2:
+                    vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/enemy2.png"));
+                    break;
+
+            }
+            //de rectangle van enemy wordt hier gemaakt en zorgt ervoor dat het plaatje van de enemy er in staat
             Rectangle newEnemy = new Rectangle
             {
                 Tag = "Enemy",
                 Height = 40,
                 Width = 50,
-                Fill = Brushes.White
+                Fill = vijanden
             };
-
             //zet locatie van de rectangle en maakt het een kind van de canvas
             int width = (int)newEnemy.Width;
             Canvas.SetTop(newEnemy, rand.Next(-100, 0));
@@ -258,7 +286,8 @@ namespace ArcadeGameProject
             enemy.InWall = wallLeft;
             enemy.OutWall = wallRight;
             enemy.WhichSide = side;
-            int a = rand.Next(1, 3);
+
+           
             if (a == 1)
             {
                 enemy.ToLeft = true;
@@ -271,15 +300,17 @@ namespace ArcadeGameProject
             }
 
             //zet de score voor het type enemy en voegt toe aan de lijst van enemiesonscreen
-            if(enemytype == Enemytype.Enemy1)
+            if (enemytype == Enemytype.Enemy1)
             {
                 enemy.score = 100;
             }
             else if (enemytype == Enemytype.Enemy2)
             {
                 enemy.score = 250;
+              
             }
             EnemiesOnScreen.Add(enemy);
+
 
         }
 

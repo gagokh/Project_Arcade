@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="GameWindow" Height="960" Width="1280">
     <Canvas x:Name="MyCanvas" Focusable="True" Background="Black" KeyDown="OnKeyDown" KeyUp="OnKeyUp">
-        <Rectangle x:Name="Player1" Height="50" Width="60" Fill="Orange" Canvas.Left="320" Canvas.Top="856"/>
-        <Rectangle x:Name="Player2" Height="50" Width="60" Fill="Orange" Canvas.Top="856" Canvas.Left="960"/>
+        <Rectangle x:Name="Player1" Height="75" Width="80" Fill="Orange" Canvas.Left="320" Canvas.Top="856"/>
+        <Rectangle x:Name="Player2" Height="75" Width="80" Fill="Orange" Canvas.Top="856" Canvas.Left="960"/>
         <Label x:Name="Scorep1" Foreground="White" Content="score =" FontSize="20"/>
         <Label x:Name="Scorep2" Foreground="White" Content="score = " Canvas.Left="1189" FontSize="20"/>
         <Label x:Name="ScoreP1" Foreground="White" Content="" FontSize="20" Canvas.Top="40"/>

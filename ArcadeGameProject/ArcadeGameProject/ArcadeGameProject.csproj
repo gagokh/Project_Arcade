@@ -6,4 +6,22 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="plaatjes\background1.jpg" />
+    <None Remove="plaatjes\background2.png" />
+    <None Remove="plaatjes\enemy2.png" />
+    <None Remove="plaatjes\player1.png" />
+    <None Remove="plaatjes\player2.png" />
+    <None Remove="plaatjes\player3.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="plaatjes\background1.jpg" />
+    <Resource Include="plaatjes\background2.png" />
+    <Resource Include="plaatjes\enemy2.png" />
+    <Resource Include="plaatjes\player1.png" />
+    <Resource Include="plaatjes\player2.png" />
+    <Resource Include="plaatjes\player3.png" />
+  </ItemGroup>
+
 </Project>

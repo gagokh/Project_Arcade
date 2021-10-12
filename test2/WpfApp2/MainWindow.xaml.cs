@@ -102,7 +102,7 @@ namespace WpfApp2
 
             if (e.Key == Key.Space)
                 {
-                    Rectangle newBullet = new Rectangle()
+                    Rectangle newBullet = new Rectangle
                     {
                         Tag = "bullet",
                         Height = 20,
