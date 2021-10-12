@@ -57,7 +57,7 @@ namespace ArcadeGameProject
             //achtergrond plaatje
             ImageBrush bg = new ImageBrush();
 
-            bg.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/background1.jpg"));
+            bg.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/Backgroundwline.png"));
             MyCanvas.Background = bg;
 
             ImageBrush playerimage1 = new ImageBrush();
@@ -255,12 +255,12 @@ namespace ArcadeGameProject
             int a = rand.Next(1, 3);
            
             ImageBrush vijanden = new ImageBrush();
-            switch (a)
+            switch (enemytype)
             {
-                case 1:
+                case Enemytype.Enemy1:
                     vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/player3.png"));
                     break;
-                case 2:
+                case Enemytype.Enemy2:
                     vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/enemy2.png"));
                     break;
 
