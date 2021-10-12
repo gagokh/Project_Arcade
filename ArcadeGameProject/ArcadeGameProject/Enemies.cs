@@ -19,13 +19,10 @@ namespace ArcadeGameProject
         public int OutWall;
         public int score;
         public side WhichSide;
-        public int bulletcount;
-        public int speed;
-        public int sidespeed;
         //public int HitTime;
         
     }
 }
 //enums zijn een soort van status mogelijkheid die gebruikt kan worden in if statements om te kijken of iets voldoet of niet, heel handig
-public enum Enemytype {Enemy1, Enemy2, Enemy3}
+public enum Enemytype {Enemy1, Enemy2 }
 public enum side {left, right}

@@ -7,8 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <!--background image-->
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/project_arcade_bg.png"/>
+        </Grid.Background>
+
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="3*"></RowDefinition>
@@ -21,18 +23,16 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-
             <Grid Grid.Column="1">
                 <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
-                    <Button x:Name="playbutton" FontSize="20" Margin="0,0,0,10" Click="OnClickPlay" >Play Game</Button>
-                    <Button x:Name="Highscorebutton" FontSize="20" Margin="0,0,0,10">Highscore</Button>
-                    <Button x:Name="ExitGameButton" FontSize="20" Click="OnClickExit">Exit Game</Button>
+                    <Button x:Name="playbutton"      FontFamily="pack://application:,,,/fonts/#Oswald" Background="#FFFFEB3B" Foreground="#000" FontSize="20" Margin="0,0,0,10" Click="OnClickPlay" >PLAY GAME</Button>
+                    <Button x:Name="Highscorebutton" FontFamily="pack://application:,,,/fonts/#Oswald" Background="#FFFFEB3B" Foreground="#000" FontSize="20" Margin="0,0,0,10" Click="Highscorebutton_Click">HIGHSCORES</Button>
+                    <Button x:Name="ExitGameButton"  FontFamily="pack://application:,,,/fonts/#Oswald" Background="#FFFFEB3B" Foreground="#000" FontSize="20" Click="OnClickExit">EXIT GAME</Button>
                 </StackPanel>
             </Grid>
         </Grid>
 
-
-        <Label x:Name="Gametitel" Content="ArcadeGame" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label x:Name="Gametitel" Content="ArcadeGame" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#FFFFEB3B" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
     </Grid>
 </Window>

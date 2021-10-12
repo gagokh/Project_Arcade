@@ -1,0 +1,27 @@
+﻿<Window x:Class="ArcadeGameProject.HighScores"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArcadeGameProject"
+        mc:Ignorable="d"
+        Title="HighScores" Height="500" Width="800">
+    <Grid>
+        <!--<DataGrid Margin="0,24,0,207" Name="dtGrid" ItemsSource="{Binding}"></DataGrid>-->
+
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/project_arcade_bg.png"/>
+        </Grid.Background>
+        <StackPanel Background="#00020B" Margin="268,76,273,192" RenderTransformOrigin="0.5,0.5">
+            <TextBlock Text="HIGHSCORES" Margin="15" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#FFEB3B" FontSize="23" TextAlignment="Center" TextWrapping="Wrap" Width="179"/>
+            <TextBlock TextWrapping="Wrap" Margin="6,-4,10,10" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#fff" FontSize="13.9" Width="241"><Run Text="   "/><Run Text="    "/><Run Text=" 01 "/><Run Text="   Peter         50.000"/></TextBlock>
+            <TextBlock TextWrapping="Wrap" Margin="5,-1,10,10" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#fff" FontSize="13.9" Width="241"><Run Text="   "/><Run Text="    "/><Run Text=" 02"/><Run Text="   Peter         33.000"/></TextBlock>
+
+            <TextBlock TextWrapping="Wrap" Margin="5,-1,10,10" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#fff" FontSize="13.9" Width="241"><Run Text="   "/><Run Text="    "/><Run Text=" 03"/><Run Text="   Peter         22.000"/></TextBlock>
+            <TextBlock TextWrapping="Wrap" Margin="5,-1,10,10" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#fff" FontSize="13.9" Width="241"><Run Text="   "/><Run Text="    "/><Run Text=" 04"/><Run Text="   Peter         15.000"/></TextBlock>
+            <TextBlock TextWrapping="Wrap" Margin="5,-1,10,10" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#fff" FontSize="13.9" Width="241"><Run Text="   "/><Run Text="    "/><Run Text=" 05"/><Run Text="   Peter         12.000"/></TextBlock>
+            <!--<Button Content="CLOSE" FontWeight="DemiBold" Height="33" Foreground="#fff" Background="#000A22" Margin="366,250,380,201"/>-->
+        </StackPanel>
+        
+    </Grid>
+</Window>
