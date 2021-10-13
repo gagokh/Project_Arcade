@@ -205,7 +205,15 @@ namespace ArcadeGameProject
             else if (Backgroundseconds >= 34 && Backgroundseconds <= 64)
             {
                 ScreenMessage.Content = "";
-                SpawnType = Enemytype.Enemy2;
+                int a = 0;
+                if (a == 0 && a==2)
+                {
+                    SpawnType = Enemytype.Enemy1;
+                }
+                else if (a == 1)
+                {
+                    SpawnType = Enemytype.Enemy2;
+                }
                 Enemyspawn = true;
             }
             else if (Backgroundseconds >= 64 && Backgroundseconds <= 66)
