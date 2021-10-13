@@ -10,11 +10,19 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\App.xaml
+<<<<<<< HEAD
 31886265954
 
 8-1281600587
 1941636664285
 GameWindow.xaml;HighScores.xaml;MainWindow.xaml;
+=======
+2396499192
+
+5-585712888
+193-1891726104
+GameWindow.xaml;MainWindow.xaml;
+>>>>>>> concept-friso
 
 False
 

@@ -1,3 +1,53 @@
+<<<<<<< HEAD
+=======
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.exe
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.deps.json
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.runtimeconfig.json
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.runtimeconfig.dev.json
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.dll
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ref\ArcadeGameProject.dll
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.pdb
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\GameWindow.g.cs
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject_MarkupCompile.cache
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject_MarkupCompile.lref
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\GameWindow.baml
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\MainWindow.baml
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.g.resources
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.AssemblyInfoInputs.cache
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.AssemblyInfo.cs
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.csproj.CoreCompileInputs.cache
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.dll
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ref\ArcadeGameProject.dll
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.pdb
+C:\Users\gamer\Documents\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.genruntimeconfig.cache
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.exe
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.deps.json
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.runtimeconfig.json
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.runtimeconfig.dev.json
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.dll
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ref\ArcadeGameProject.dll
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.pdb
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.csproj.AssemblyReference.cache
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\GameWindow.g.cs
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject_MarkupCompile.cache
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject_MarkupCompile.lref
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\GameWindow.baml
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\MainWindow.baml
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.g.resources
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.AssemblyInfoInputs.cache
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.AssemblyInfo.cs
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.csproj.CoreCompileInputs.cache
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.dll
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ref\ArcadeGameProject.dll
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.pdb
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.genruntimeconfig.cache
+>>>>>>> concept-friso
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.exe
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.deps.json
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.runtimeconfig.json
@@ -22,6 +72,7 @@ D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\Ar
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ref\ArcadeGameProject.dll
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.pdb
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.genruntimeconfig.cache
+<<<<<<< HEAD
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\HighScores.g.cs
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\HighScores.baml
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
@@ -67,3 +118,5 @@ D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.AssemblyInfo.cs
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.csproj.CoreCompileInputs.cache
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.genruntimeconfig.cache
+=======
+>>>>>>> concept-friso
