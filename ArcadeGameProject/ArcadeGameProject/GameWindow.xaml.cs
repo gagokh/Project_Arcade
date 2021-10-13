@@ -22,7 +22,6 @@ namespace ArcadeGameProject
     /// </summary>
     public partial class GameWindow : Window
     {
-       
         # region Variabelen
         private DispatcherTimer gameTimer = new DispatcherTimer();
         private List<Rectangle> itemsToRemove = new List<Rectangle>();
@@ -205,15 +204,27 @@ namespace ArcadeGameProject
             else if (Backgroundseconds >= 34 && Backgroundseconds <= 64)
             {
                 ScreenMessage.Content = "";
-                int a = 0;
-                if (a == 0 && a==2)
+                if (enemySpawnCounter < 0)
                 {
-                    SpawnType = Enemytype.Enemy1;
+                    if (SpawnType == Enemytype.Enemy2)
+                    {
+                        SpawnType = Enemytype.Enemy1;
+                    }
+                    else if (SpawnType == Enemytype.Enemy1)
+                    {
+                        int a = rand.Next(1, 3);
+                        if (a == 1)
+                        {
+                            SpawnType = Enemytype.Enemy2;
+                        }
+                        else if (a == 2)
+                        {
+                            SpawnType = Enemytype.Enemy1;
+                        }
+
+                    }
                 }
-                else if (a == 1)
-                {
-                    SpawnType = Enemytype.Enemy2;
-                }
+
                 Enemyspawn = true;
             }
             else if (Backgroundseconds >= 64 && Backgroundseconds <= 66)
