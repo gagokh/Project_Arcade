@@ -30,6 +30,19 @@
                     <Button x:Name="ExitGameButton"  FontFamily="pack://application:,,,/fonts/#Oswald" Background="#FFFFEB3B" Foreground="#000" FontSize="20" Click="OnClickExit">EXIT GAME</Button>
                 </StackPanel>
             </Grid>
+            <Grid Grid.Column="0">
+                <StackPanel>
+                    <Label HorizontalAlignment="Center" FontSize="20" FontFamily="pack://application:,,,/fonts/#Oswald" Foreground="#FFFFEB3B">Voer naam Speler 1 in:</Label>
+                    <TextBox x:Name="NamePlayer1"  Background="LightGray" Margin="60,0,50,0"  VerticalAlignment="Top" Height="20px" UndoLimit="10"></TextBox>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="2">
+                <StackPanel>
+                    <Label HorizontalAlignment="Center" FontSize="20" FontFamily="pack://application:,,,/fonts/#Oswald" Foreground="#FFFFEB3B">Voer naam Speler 2 in:</Label>
+                    <TextBox x:Name="NamePlayer2" Background="LightGray" Margin="60,0,50,0"  VerticalAlignment="Top" Height="20px"></TextBox>
+                </StackPanel>
+            </Grid>
+
         </Grid>
 
         <Label x:Name="Gametitel" Content="ArcadeGame" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#FFFFEB3B" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>

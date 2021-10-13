@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Release\net5.0-windows\
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Release\net5.0-windows\
 ArcadeGameProject
 none
 false
 TRACE;RELEASE;NET;NET5_0;NETCOREAPP
-D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\App.xaml
+
 31886265954
 
-8-1281600587
-194-239581939
+6-931477239
+1941774876247
 GameWindow.xaml;HighScores.xaml;MainWindow.xaml;
 
 True

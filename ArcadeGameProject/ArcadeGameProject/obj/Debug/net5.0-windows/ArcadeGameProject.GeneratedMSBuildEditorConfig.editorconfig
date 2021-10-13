@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = ArcadeGameProject
-build_property.ProjectDir = D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\
+build_property.ProjectDir = D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\

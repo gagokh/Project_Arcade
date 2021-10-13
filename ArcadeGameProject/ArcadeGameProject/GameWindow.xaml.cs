@@ -522,6 +522,28 @@ namespace ArcadeGameProject
             }
 
         }
+        // maakt connectie met de database en slaat de gegevens op
+        //private void AddHighscoreToDatabase(int highscore)
+        //{
+        //    string connectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename =\"D:\\ArcadeGIT\\ArcadeGameProject\\ArcadeGameProject\\Data\\Database1.mdf\";Integrated Security=True";
+        //    string query = "INSERT INTO [Highscores] ([Highscore],[Player],[Date]) VALUES ('" +
+        //    highscore + NamePlayer1 + DateTime.Today + "')";
+        //    SqlConnection connection = new SqlConnection(connectionString);
+        //    SqlCommand command = new SqlCommand();
+        //    try
+        //    {
+        //        command.CommandText = query;
+        //        command.CommandType = CommandType.Text;
+        //        command.Connection = connection;
+        //        connection.Open();
+        //        command.ExecuteNonQuery();
+        //        connection.Close();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        connection.Close();
+        //    }
+        //}
 
     }
 }

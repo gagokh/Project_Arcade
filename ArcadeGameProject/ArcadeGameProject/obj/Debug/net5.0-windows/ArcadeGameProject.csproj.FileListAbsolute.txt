@@ -67,3 +67,12 @@ D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.AssemblyInfo.cs
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.csproj.CoreCompileInputs.cache
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.genruntimeconfig.cache
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.csproj.AssemblyReference.cache
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\GameWindow.g.cs
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\HighScores.g.cs
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject_MarkupCompile.cache
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject_MarkupCompile.lref
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.dll
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ref\ArcadeGameProject.dll
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.pdb
