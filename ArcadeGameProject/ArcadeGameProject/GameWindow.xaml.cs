@@ -63,6 +63,21 @@ namespace ArcadeGameProject
             //score wordt gezet op 0
             ScoreP1.Content = scoreP1;
             ScoreP2.Content = scoreP2;
+
+            //achtergrond plaatje
+            ImageBrush bg = new ImageBrush();
+
+            bg.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/Backgroundwline.png"));
+            MyCanvas.Background = bg;
+
+            ImageBrush playerimage1 = new ImageBrush();
+            playerimage1.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/player1.png"));
+            Player1.Fill = playerimage1;
+
+            ImageBrush playerimage2 = new ImageBrush();
+            playerimage2.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/player2.png"));
+            Player2.Fill = playerimage2;
+
         }
 
         /// <summary>
@@ -402,13 +417,25 @@ namespace ArcadeGameProject
         /// <param name="side">deze parameter zorgt er voor dat de enemy de juiste score aan de juiste player geeft </param>
         public void CreateEnemy(int wallLeft, int wallRight, Enemytype enemytype, side side)
         {
+
+            ImageBrush vijanden = new ImageBrush();
+            switch (enemytype)
+            {
+                case Enemytype.Enemy1:
+                    vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/player3.png"));
+                    break;
+                case Enemytype.Enemy2:
+                    vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/enemy2.png"));
+                    break;
+            }
+
             //de rectangle van enemy wordt hier gemaakt 
             Rectangle newEnemy = new Rectangle
             {
                 Tag = "Enemy",
                 Height = 40,
                 Width = 50,
-                Fill = Brushes.White
+                Fill = vijanden
             };
 
             //zet locatie van de rectangle en maakt het een kind van de canvas
