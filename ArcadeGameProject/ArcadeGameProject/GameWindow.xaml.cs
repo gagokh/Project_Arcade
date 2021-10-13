@@ -42,7 +42,7 @@ namespace ArcadeGameProject
         private int EnemySpawnLimit = 50;
         private int Time;
         private int seconds;
-        private int Backgroundseconds;
+        private int Backgroundseconds = 60;
         private int minutes;
         private int scoreP1=0;
         private int scoreP2=0;
@@ -203,7 +203,7 @@ namespace ArcadeGameProject
                 Enemyspawn = false;
                 enemySpawnCounter = 0;
             }
-            else if (Backgroundseconds >= 34)
+            else if (Backgroundseconds >= 34 && Backgroundseconds <= 64)
             {
                 ScreenMessage.Content = "";
                 SpawnType = Enemytype.Enemy2;
@@ -217,7 +217,7 @@ namespace ArcadeGameProject
             }
             else if (Backgroundseconds >= 66)
             {
-                ScreenMessage.Content = "";
+                ScreenMessage.Content = "Backgroundseconds";
                 SpawnType = Enemytype.Enemy3;
                 Enemyspawn = true;
             }
