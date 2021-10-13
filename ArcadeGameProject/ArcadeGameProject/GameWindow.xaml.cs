@@ -216,7 +216,7 @@ namespace ArcadeGameProject
             }
             else if (Backgroundseconds >= 66)
             {
-                ScreenMessage.Content = "Backgroundseconds";
+                ScreenMessage.Content = "";
                 SpawnType = Enemytype.Enemy3;
                 Enemyspawn = true;
             }
