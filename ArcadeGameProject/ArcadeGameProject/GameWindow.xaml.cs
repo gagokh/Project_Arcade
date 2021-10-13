@@ -417,10 +417,7 @@ namespace ArcadeGameProject
         /// <param name="side">deze parameter zorgt er voor dat de enemy de juiste score aan de juiste player geeft </param>
         public void CreateEnemy(int wallLeft, int wallRight, Enemytype enemytype, side side)
         {
-            
-            
-            int a = rand.Next(1, 3);
-           
+          
             ImageBrush vijanden = new ImageBrush();
             switch (enemytype)
             {
