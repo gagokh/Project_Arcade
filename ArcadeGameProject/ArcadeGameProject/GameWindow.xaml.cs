@@ -42,7 +42,7 @@ namespace ArcadeGameProject
         private int EnemySpawnLimit = 50;
         private int Time;
         private int seconds;
-        private int Backgroundseconds = 60;
+        private int Backgroundseconds;
         private int minutes;
         private int scoreP1=0;
         private int scoreP2=0;
@@ -64,7 +64,6 @@ namespace ArcadeGameProject
             ScoreP1.Content = scoreP1;
             ScoreP2.Content = scoreP2;
         }
-
 
         /// <summary>
         /// de methode die ervoor zorgt dat zodra een key wordt ingedrukt er een actie true wordt gezet die in de gamengine wordt verwerkt.
