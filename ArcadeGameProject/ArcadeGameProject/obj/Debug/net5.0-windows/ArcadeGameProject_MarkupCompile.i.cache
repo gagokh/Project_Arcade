@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\
+D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\
 ArcadeGameProject
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\App.xaml
+D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\App.xaml
 31886265954
 
 1030600823
-1941774876247
+193-1891726104
 GameWindow.xaml;HighScores.xaml;MainWindow.xaml;
 
-False
+True
 
