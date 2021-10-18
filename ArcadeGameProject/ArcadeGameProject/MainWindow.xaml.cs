@@ -15,11 +15,17 @@ using System.Windows.Shapes;
 
 namespace ArcadeGameProject
 {
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+#region Variabelen
+        String Name1;
+        String Name2;
+        #endregion
+
         public MainWindow()
         {
             InitializeComponent();
@@ -30,6 +36,10 @@ namespace ArcadeGameProject
             //opent de Gamewindow
             GameWindow GW = new GameWindow();
             GW.Visibility = Visibility.Visible;
+            String Name1 = NamePlayer1.Text;
+            String Name2 = NamePlayer2.Text;
+            GW.Playername1 = Name1;
+            GW.Playername2 = Name2;
         }
 
         private void OnClickExit(object sender, RoutedEventArgs e)

@@ -53,7 +53,7 @@ namespace ArcadeGameProject {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ArcadeGameProject;component/highscores.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ArcadeGameProject;V1.0.0.0;component/highscores.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\HighScores.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -32,17 +32,16 @@
             </Grid>
             <Grid Grid.Column="0">
                 <StackPanel>
-                    <Label HorizontalAlignment="Center" FontSize="20" FontFamily="pack://application:,,,/fonts/#Oswald" Foreground="#FFFFEB3B">Voer naam Speler 1 in:</Label>
-                    <TextBox x:Name="NamePlayer1"  Background="LightGray" Margin="60,0,50,0"  VerticalAlignment="Top" Height="20px" UndoLimit="10"></TextBox>
+                    <Label HorizontalAlignment="Center" FontSize="14" Foreground="#FFFFEB3B" FontFamily="pack://application:,,,/fonts/#Oswald">Voer naam Speler 1 in:</Label>
+                    <TextBox x:Name="NamePlayer1" FontSize="14" FontFamily="pack://application:,,,/fonts/#Oswald" Background="LightGray" Margin="60,0,50,0"  VerticalAlignment="Top" Height="20px" UndoLimit="10"></TextBox>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="2">
                 <StackPanel>
-                    <Label HorizontalAlignment="Center" FontSize="20" FontFamily="pack://application:,,,/fonts/#Oswald" Foreground="#FFFFEB3B">Voer naam Speler 2 in:</Label>
-                    <TextBox x:Name="NamePlayer2" Background="LightGray" Margin="60,0,50,0"  VerticalAlignment="Top" Height="20px"></TextBox>
+                    <Label HorizontalAlignment="Center" FontSize="14" Margin="10,0,0,0" Foreground="#FFFFEB3B" FontFamily="pack://application:,,,/fonts/#Oswald">Voer naam Speler 2 in:</Label>
+                    <TextBox x:Name="NamePlayer2" FontSize="14" FontFamily="pack://application:,,,/fonts/#Oswald" Background="LightGray" Margin="60,0,50,0"  VerticalAlignment="Top" Height="20px"></TextBox>
                 </StackPanel>
             </Grid>
-
         </Grid>
 
         <Label x:Name="Gametitel" Content="ArcadeGame" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#FFFFEB3B" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
