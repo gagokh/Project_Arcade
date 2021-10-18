@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj": {}
+    "D:\\GitProjectArcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj": {}
   },
   "projects": {
-    "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj": {
+    "D:\\GitProjectArcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
+        "projectUniqueName": "D:\\GitProjectArcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
         "projectName": "ArcadeGameProject",
-        "projectPath": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
-        "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-        "outputPath": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\obj\\",
+        "projectPath": "D:\\GitProjectArcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
+        "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
+        "outputPath": "D:\\GitProjectArcade\\ArcadeGameProject\\ArcadeGameProject\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Visual_Studio\\SDK\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Patrick\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
