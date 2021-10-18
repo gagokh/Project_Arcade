@@ -454,25 +454,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gebruiker\\.nuget\\packages\\": {},
-    "D:\\Visual_Studio\\SDK\\NuGetPackages": {}
+    "C:\\Users\\gamer\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
+      "projectUniqueName": "C:\\Users\\gamer\\Desktop\\GIT\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
       "projectName": "ArcadeGameProject",
-      "projectPath": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
-      "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-      "outputPath": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\obj\\",
+      "projectPath": "C:\\Users\\gamer\\Desktop\\GIT\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
+      "packagesPath": "C:\\Users\\gamer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gamer\\Desktop\\GIT\\ArcadeGameProject\\ArcadeGameProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Visual_Studio\\SDK\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0-windows7.0"

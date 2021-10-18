@@ -427,6 +427,9 @@ namespace ArcadeGameProject
                 case Enemytype.Enemy2:
                     vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/enemy2.png"));
                     break;
+                case Enemytype.Enemy3:
+                    vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/enemy3.png"));
+                    break;
             }
 
             //de rectangle van enemy wordt hier gemaakt 

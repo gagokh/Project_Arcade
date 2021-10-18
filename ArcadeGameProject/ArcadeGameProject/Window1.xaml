@@ -1,0 +1,39 @@
+﻿<Window x:Class="ArcadeGameProject.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArcadeGameProject"
+        mc:Ignorable="d"
+        Title="PauzeMenu" Height="960" Width="1280">
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="Plaatjes/blurred.png"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="stretch" >
+                    <Button x:Name="Resumebutton"      FontFamily="pack://application:,,,/fonts/#Oswald" Background="#FFFFEB3B" Foreground="#000" FontSize="30" Margin="0,0,0,10" Click="OnClickResume" Height="60">RESUME GAME</Button>
+                    <Button x:Name="Restartbutton" FontFamily="pack://application:,,,/fonts/#Oswald" Background="#FFFFEB3B" Foreground="#000" FontSize="30" Margin="0,0,0,10" Click="OnClickRestartGame" Height="60">RESTART GAME</Button>
+                    <Button x:Name="Mainmenubutton"  FontFamily="pack://application:,,,/fonts/#Oswald" Background="#FFFFEB3B" Foreground="#000" FontSize="30" Click="OnClickGoMM" Height="60">MAIN MENU</Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <Label x:Name="Gametitel" Content="Game Paused" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#FFFFEB3B" FontSize="80" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+    </Grid>
+</Window>
