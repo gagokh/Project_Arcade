@@ -454,41 +454,25 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\Patrick\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\Alissa\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
->>>>>>> 24be9639f8eb259f85f7892c291d0e4d03cc5887
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\": {},
+    "D:\\Visual_Studio\\SDK\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "D:\\ArcadeGIT\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
+      "projectUniqueName": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
       "projectName": "ArcadeGameProject",
-      "projectPath": "D:\\ArcadeGIT\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
-      "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
-      "outputPath": "D:\\ArcadeGIT\\ArcadeGameProject\\ArcadeGameProject\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\Patrick\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-=======
-      "projectUniqueName": "D:\\Nieuwe map\\Project_Arcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
-      "projectName": "ArcadeGameProject",
-      "projectPath": "D:\\Nieuwe map\\Project_Arcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
-      "packagesPath": "C:\\Users\\Alissa\\.nuget\\packages\\",
-      "outputPath": "D:\\Nieuwe map\\Project_Arcade\\ArcadeGameProject\\ArcadeGameProject\\obj\\",
+      "projectPath": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
+      "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
+      "outputPath": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "D:\\Visual_Studio\\SDK\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Alissa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
->>>>>>> 24be9639f8eb259f85f7892c291d0e4d03cc5887
+        "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0-windows7.0"
@@ -536,7 +520,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -545,7 +529,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\ArcadeGIT\\ArcadeGameProject\\ArcadeGameProject\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problem reading the cache file D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }
