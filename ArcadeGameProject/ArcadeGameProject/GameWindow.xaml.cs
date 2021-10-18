@@ -45,8 +45,10 @@ namespace ArcadeGameProject
         private int minutes;
         private int scoreP1=0;
         private int scoreP2=0;
+        private int P1bulletcount = 0;
+        private int P2bulletcount = 0;
 
-        private bool moveLeft1, moveRight1, moveLeft2, moveRight2, Enemyspawn;
+        private bool moveLeft1, moveRight1, moveLeft2, moveRight2, Enemyspawn, Shootp1, Shootp2;
         # endregion
 
         public GameWindow()
@@ -90,6 +92,14 @@ namespace ArcadeGameProject
             {
                 moveRight2 = true;
             }
+            if (e.Key == Key.W)
+            {
+                Shootp1 = true;
+            }
+            if (e.Key == Key.Up)
+            {
+                Shootp2 = true;
+            }
         }
 
         /// <summary>
@@ -122,11 +132,11 @@ namespace ArcadeGameProject
             }
             if (e.Key == Key.W)
             {
-                CreateBullet(Player1);
+                Shootp1 = false;
             }
             if (e.Key == Key.Up)
             {
-                CreateBullet(Player2);
+                Shootp2 = false;
             }
         }
 
@@ -161,7 +171,7 @@ namespace ArcadeGameProject
             //voeg hier een aanroep naar de merthode van de database toe zodra de gewillde tijd voorbij is 
             #endregion
 
-            #region movement players
+            #region movement players + shooting players
             if (moveLeft1 && Canvas.GetLeft(Player1) > 0)
             {
                 Canvas.SetLeft(Player1, Canvas.GetLeft(Player1) - playerSpeed);
@@ -178,6 +188,31 @@ namespace ArcadeGameProject
             {
                 Canvas.SetLeft(Player2, Canvas.GetLeft(Player2) + playerSpeed);
             }
+            if (Shootp1)
+            {
+                if (P1bulletcount == 10)
+                {
+                    CreateBullet(Player1);
+                    P1bulletcount = 0;
+                }
+                else
+                {
+                    P1bulletcount++;
+                }
+
+            }
+            if (Shootp2)
+            {
+                if (P2bulletcount == 10)
+                {
+                    CreateBullet(Player2);
+                    P2bulletcount = 0;
+                }
+                else
+                {
+                    P2bulletcount++;
+                }
+            }
             #endregion
 
             #region EnemySpawning
@@ -188,57 +223,120 @@ namespace ArcadeGameProject
                 ScreenMessage.Content = "Start Wave 1";
                 Enemyspawn = false;
                 enemySpawnCounter = 0;
-            }
+            } //wave 1 aankondiging
             else if (Backgroundseconds >= 2 && Backgroundseconds <= 32)
             {
                 ScreenMessage.Content = "";
-                SpawnType = Enemytype.Enemy1;
+                int b = rand.Next(1, 100);
+                if (enemySpawnCounter < 0) 
+                {
+                    if (b == 1)
+                    {
+                        SpawnType = Enemytype.Enemy4;
+                    }
+                    else
+                    {
+                        SpawnType = Enemytype.Enemy1;
+                    }
+                }
                 Enemyspawn = true;
-            }
+
+            } //wave 1 (enemy 1)
             else if (Backgroundseconds >= 32 && Backgroundseconds <= 34)
             {
                 ScreenMessage.Content = "Start Wave 2";
                 Enemyspawn = false;
                 enemySpawnCounter = 0;
-            }
+            }//wave 2 aankondiging
             else if (Backgroundseconds >= 34 && Backgroundseconds <= 64)
             {
                 ScreenMessage.Content = "";
+                int b = rand.Next(1, 100);
                 if (enemySpawnCounter < 0)
                 {
-                    if (SpawnType == Enemytype.Enemy2)
+                    if (b == 1)
                     {
-                        SpawnType = Enemytype.Enemy1;
+                        SpawnType = Enemytype.Enemy4;
                     }
-                    else if (SpawnType == Enemytype.Enemy1)
+                    else
                     {
-                        int a = rand.Next(1, 3);
-                        if (a == 1)
-                        {
-                            SpawnType = Enemytype.Enemy2;
-                        }
-                        else if (a == 2)
+                        if (SpawnType == Enemytype.Enemy2)
                         {
                             SpawnType = Enemytype.Enemy1;
                         }
+                        else if (SpawnType == Enemytype.Enemy1 || SpawnType == Enemytype.Enemy4)
+                        {
+                            int a = rand.Next(1, 3);
+                            if (a == 1)
+                            {
+                                SpawnType = Enemytype.Enemy2;
+                            }
+                            else if (a == 2)
+                            {
+                                SpawnType = Enemytype.Enemy1;
+                            }
 
+                        }
                     }
+                        
                 }
-
                 Enemyspawn = true;
-            }
+
+            }//wave 2 (enemy 1 en 2)
             else if (Backgroundseconds >= 64 && Backgroundseconds <= 66)
             {
                 ScreenMessage.Content = "Start Wave 3";
                 Enemyspawn = false;
                 enemySpawnCounter = 0;
-            }
-            else if (Backgroundseconds >= 66)
+
+            }//wave 3 aankondiging
+            else if (Backgroundseconds >= 66 && Backgroundseconds <= 96)//wave 3
             {
                 ScreenMessage.Content = "";
-                SpawnType = Enemytype.Enemy3;
+                int b = rand.Next(1, 100);
+                if (enemySpawnCounter < 0)
+                {
+                    if (b == 1)
+                    {
+                        SpawnType = Enemytype.Enemy4;
+                    }
+                    else
+                    {
+                        if (SpawnType == Enemytype.Enemy3)
+                        {
+                            SpawnType = Enemytype.Enemy1;
+                        }
+                        else if (SpawnType == Enemytype.Enemy2)
+                        {
+                            SpawnType = Enemytype.Enemy1;
+                        }
+                        else if (SpawnType == Enemytype.Enemy1 || SpawnType == Enemytype.Enemy4)
+                        {
+                            int a = rand.Next(1, 4);
+                            if (a == 1)
+                            {
+                                SpawnType = Enemytype.Enemy2;
+                            }
+                            else if (a == 2)
+                            {
+                                SpawnType = Enemytype.Enemy1;
+                            }
+                            else if (a == 3)
+                            {
+                                SpawnType = Enemytype.Enemy3;
+                            }
+
+                        }
+                    }
+                }
                 Enemyspawn = true;
-            }
+
+            }//wave 3 (enemy 1, 2 en 3)
+            else if (Backgroundseconds >= 96)//gameover
+            {
+                ScreenMessage.Content = "GameOver";
+                Enemyspawn = false;
+            } //GameOver
 
             if (Enemyspawn == true) //er wordt gekeken of er enmies gespawnd kunnen worden;
             {
@@ -465,13 +563,18 @@ namespace ArcadeGameProject
             else if (enemytype == Enemytype.Enemy2)
             {
                 enemy.score = 250;
-                enemy.speed = 10;
+                enemy.speed = 5;
                 enemy.sidespeed = 10;
             }
             else if (enemytype == Enemytype.Enemy3)
             {
                 enemy.score = 500;
                 enemy.speed = 5;
+            }
+            else if (enemytype == Enemytype.Enemy4)
+            {
+                enemy.score = 1000;
+                enemy.speed = 20;
             }
             EnemiesOnScreen.Add(enemy);
 
