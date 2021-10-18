@@ -49,7 +49,12 @@ namespace ArcadeGameProject
         private int P2bulletcount = 0;
 
         private bool moveLeft1, moveRight1, moveLeft2, moveRight2, Enemyspawn, Shootp1, Shootp2;
-        # endregion
+
+        public string Playername1;
+        public string Playername2;
+
+        public object Nameplayer1 { get; internal set; }
+        #endregion
 
         public GameWindow()
         {

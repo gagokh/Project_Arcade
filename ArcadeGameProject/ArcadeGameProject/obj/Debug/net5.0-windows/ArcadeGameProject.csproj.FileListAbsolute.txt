@@ -67,3 +67,38 @@ D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.AssemblyInfo.cs
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.csproj.CoreCompileInputs.cache
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.genruntimeconfig.cache
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.exe
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.deps.json
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.runtimeconfig.json
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.runtimeconfig.dev.json
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.dll
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ref\ArcadeGameProject.dll
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.pdb
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.csproj.AssemblyReference.cache
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\GameWindow.g.cs
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\HighScores.g.cs
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\App.g.cs
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject_MarkupCompile.cache
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject_MarkupCompile.lref
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\GameWindow.baml
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\HighScores.baml
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\MainWindow.baml
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.g.resources
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.Properties.Resources.resources
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.csproj.GenerateResource.cache
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.GeneratedMSBuildEditorConfig.editorconfig
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.AssemblyInfoInputs.cache
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.AssemblyInfo.cs
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.csproj.CoreCompileInputs.cache
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.csproj.CopyComplete
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.dll
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ref\ArcadeGameProject.dll
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.pdb
+D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.genruntimeconfig.cache
