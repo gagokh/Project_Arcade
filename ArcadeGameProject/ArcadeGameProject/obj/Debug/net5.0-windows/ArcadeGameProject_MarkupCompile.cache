@@ -5,7 +5,11 @@ winexe
 C#
 .cs
 <<<<<<< HEAD
+<<<<<<< HEAD
 D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\
+=======
+D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\
+>>>>>>> 24be9639f8eb259f85f7892c291d0e4d03cc5887
 =======
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\
 >>>>>>> 24be9639f8eb259f85f7892c291d0e4d03cc5887
@@ -14,11 +18,19 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 <<<<<<< HEAD
+<<<<<<< HEAD
 D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\App.xaml
 31886265954
 
 8-1281600587
 1941774876247
+=======
+D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\App.xaml
+31886265954
+
+8-1281600587
+194-239581939
+>>>>>>> 24be9639f8eb259f85f7892c291d0e4d03cc5887
 =======
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\App.xaml
 31886265954

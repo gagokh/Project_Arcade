@@ -112,14 +112,7 @@ namespace ArcadeGameProject
             {
                 moveRight2 = true;
             }
-            if (e.Key == Key.W)
-            {
-                Shootp1 = true;
-            }
-            if (e.Key == Key.Up)
-            {
-                Shootp2 = true;
-            }
+            
         }
 
         /// <summary>
@@ -152,11 +145,11 @@ namespace ArcadeGameProject
             }
             if (e.Key == Key.W)
             {
-                Shootp1 = false;
+                CreateBullet(Player1);
             }
             if (e.Key == Key.Up)
             {
-                Shootp2 = false;
+                CreateBullet(Player2);
             }
         }
 
@@ -207,31 +200,6 @@ namespace ArcadeGameProject
             if (moveRight2 && Canvas.GetLeft(Player2) + Player2.Width < outerwall - Player2.Width *0.25)
             {
                 Canvas.SetLeft(Player2, Canvas.GetLeft(Player2) + playerSpeed);
-            }
-            if (Shootp1)
-            {
-                if (P1bulletcount == 10)
-                {
-                    CreateBullet(Player1);
-                    P1bulletcount = 0;
-                }
-                else
-                {
-                    P1bulletcount++;
-                }
-
-            }
-            if (Shootp2)
-            {
-                if (P2bulletcount == 10)
-                {
-                    CreateBullet(Player2);
-                    P2bulletcount = 0;
-                }
-                else
-                {
-                    P2bulletcount++;
-                }
             }
             #endregion
 
@@ -310,7 +278,7 @@ namespace ArcadeGameProject
                 enemySpawnCounter = 0;
 
             }//wave 3 aankondiging
-            else if (Backgroundseconds >= 66 && Backgroundseconds <= 96)//wave 3
+            else if (Backgroundseconds >= 66 && Backgroundseconds <= 126)//wave 3
             {
                 ScreenMessage.Content = "";
                 int b = rand.Next(1, 100);
@@ -352,7 +320,7 @@ namespace ArcadeGameProject
                 Enemyspawn = true;
 
             }//wave 3 (enemy 1, 2 en 3)
-            else if (Backgroundseconds >= 96)//gameover
+            else if (Backgroundseconds >= 126)//gameover
             {
                 ScreenMessage.Content = "GameOver";
                 Enemyspawn = false;
