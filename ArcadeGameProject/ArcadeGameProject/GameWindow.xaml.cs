@@ -15,6 +15,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+
 namespace ArcadeGameProject
 {
     /// <summary>
@@ -322,8 +326,40 @@ namespace ArcadeGameProject
             }//wave 3 (enemy 1, 2 en 3)
             else if (Backgroundseconds >= 126)//gameover
             {
+
+                if (Time == 0)
+                {
+                    string insert = "INSERT INTO Highscores (Highscore) VALUES (@scoreP1)";
+
+                    string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\Data\\Database1.mdf;Integrated Security=True";
+                    SqlConnection connection = new SqlConnection(connectionString);
+                    {
+
+                        using (SqlCommand command = new SqlCommand(insert, connection))
+                        {
+
+                            if (string.IsNullOrEmpty(ScoreP1.Content.ToString()))
+                            {
+                                command.Parameters.AddWithValue("@scoreP1", DBNull.Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@scoreP1", (SqlDbType)scoreP1);
+                            }
+
+                                 //bgsec = *50 time = *1
+                            
+                                connection.Open();
+                                command.ExecuteNonQuery();
+                                connection.Close();
+                            
+                        }
+                    }
+                }
                 ScreenMessage.Content = "GameOver";
                 Enemyspawn = false;
+                gameTimer.Stop();
+
             } //GameOver
 
             if (Enemyspawn == true) //er wordt gekeken of er enmies gespawnd kunnen worden;

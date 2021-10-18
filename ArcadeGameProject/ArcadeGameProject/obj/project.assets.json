@@ -454,19 +454,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Patrick\\.nuget\\packages\\": {}
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\": {},
+    "D:\\Visual_Studio\\SDK\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitProjectArcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
+      "projectUniqueName": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
       "projectName": "ArcadeGameProject",
-      "projectPath": "D:\\GitProjectArcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
-      "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
-      "outputPath": "D:\\GitProjectArcade\\ArcadeGameProject\\ArcadeGameProject\\obj\\",
+      "projectPath": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
+      "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
+      "outputPath": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Visual_Studio\\SDK\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Patrick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -518,13 +523,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\GitProjectArcade\\ArcadeGameProject\\ArcadeGameProject\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
