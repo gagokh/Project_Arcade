@@ -33,18 +33,62 @@ namespace ArcadeGameProject
 
             SqlConnection connection = new SqlConnection(connectionString);
 
-            //query
-            SqlCommand cmd = new SqlCommand("Select Player, Highscore from highscores_Table ", connection);
+            try //om een exception te vermijden doen we try catch. Error ontstaat alleen als db leeg is.
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT TOP 5 CAST(Highscore AS INT) AS TheMax, Player, Id FROM Highscores ORDER BY TheMax DESC"))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = connection;
+                    connection.Open();
+                    using (SqlDataReader sdr = cmd.ExecuteReader())
+                    {
 
-            connection.Open();
-            DataTable dt = new DataTable(); //define data table
-            dt.Load(cmd.ExecuteReader()); //load the result of the reader inside the data table
-            connection.Close();
+                        for (int i = 0; i < 5; i++)
+                        {
+                            sdr.Read();
+                            txtId.Text += "\r 0" + sdr["Id"].ToString();
+                            txtPlayerName.Text += "\r" + sdr["Player"].ToString();
+                            txtScore.Text += "\r" + sdr["TheMax"].ToString();
+                        }
 
-            //dtGrid.DataContext = dt; //bind loaded data with datagrid (xaml)
+                    }
+                    connection.Close();
+                }
         }
-      }
+            catch
+            {  
+            }
+          }
+
+
+    private void OnClickClose(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+
+        ////query
+        //SqlCommand cmd = new SqlCommand("Select Player, Highscore from highscores_Table ", connection);
+
+        //connection.Open();
+        //DataTable dt = new DataTable(); //define data table
+        //dt.Load(cmd.ExecuteReader()); //load the result of the reader inside the data table
+        //connection.Close();
+
+        ////dtGrid.DataContext = dt; //bind loaded data with datagrid (xaml)
+        ///
+        //int count = sdr.FieldCount;
+        //            do
+        //            {
+        //                sdr.Read();
+        //                txtId.Text += "\r 0" + sdr["Id"].ToString();
+        //txtPlayerName.Text += "\r" + sdr["Player"].ToString();
+        //txtScore.Text += "\r" + sdr["Highscore"].ToString();
+        //count++;
+        //            } while (count< 5);
+
     }
+}
 
 
 
