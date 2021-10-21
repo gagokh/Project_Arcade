@@ -33,13 +33,13 @@
             <Grid Grid.Column="0">
                 <StackPanel>
                     <Label HorizontalAlignment="Center" FontSize="14" Foreground="#FFFFEB3B" FontFamily="pack://application:,,,/fonts/#Oswald">Voer naam Speler 1 in:</Label>
-                    <TextBox x:Name="NamePlayer1" FontSize="14" FontFamily="pack://application:,,,/fonts/#Oswald" Background="LightGray" Margin="60,0,50,0"  VerticalAlignment="Top" Height="20px" UndoLimit="10"></TextBox>
+                    <TextBox x:Name="NamePlayer1" FontSize="14" FontFamily="pack://application:,,,/fonts/#Oswald" Background="LightGray" Margin="60,0,50,0"  VerticalAlignment="Top" Height="20px" UndoLimit="10"/>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="2">
                 <StackPanel>
                     <Label HorizontalAlignment="Center" FontSize="14" Margin="10,0,0,0" Foreground="#FFFFEB3B" FontFamily="pack://application:,,,/fonts/#Oswald">Voer naam Speler 2 in:</Label>
-                    <TextBox x:Name="NamePlayer2" FontSize="14" FontFamily="pack://application:,,,/fonts/#Oswald" Background="LightGray" Margin="60,0,50,0"  VerticalAlignment="Top" Height="20px"></TextBox>
+                    <TextBox x:Name="NamePlayer2" FontSize="14" FontFamily="pack://application:,,,/fonts/#Oswald" Background="LightGray" Margin="60,0,50,0"  VerticalAlignment="Top" Height="20px"/>
                 </StackPanel>
             </Grid>
         </Grid>
