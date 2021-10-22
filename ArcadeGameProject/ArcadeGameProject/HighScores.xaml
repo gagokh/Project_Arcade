@@ -12,7 +12,7 @@
         </Grid.Background>
         <StackPanel>
             <Grid Background="#00020B" Margin="40" Height="342" Width="388">
-                <TextBlock TextWrapping="Wrap" FontFamily="pack://application:,,,/fonts/#Audiowide" FontSize="39"  Foreground="#FFEB3B" Text="HIGHSCORS" Margin="62,22,21,0"/>
+                <TextBlock TextWrapping="Wrap" FontFamily="pack://application:,,,/fonts/#Audiowide" FontSize="39"  Foreground="#FFEB3B" Text="HIGHSCORES" Margin="62,22,21,0"/>
                 <TextBlock x:Name="txtId" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#fff" FontSize="21" Width="63" Padding="1,7,1,1" Margin="52,56,0,10" HorizontalAlignment="Left"/>
                 <TextBlock x:Name="txtPlayerName" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#fff"  FontSize="21" Width="156" Padding="1,7,1,1" Margin="129,56,0,10" HorizontalAlignment="Left"/>
                 <TextBlock x:Name="txtScore" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#fff" FontSize="21" Width="95" Padding="1,7,1,1" Margin="0,56,34,10" HorizontalAlignment="Right"></TextBlock>
