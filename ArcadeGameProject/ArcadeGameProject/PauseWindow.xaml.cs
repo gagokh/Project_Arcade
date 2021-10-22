@@ -44,7 +44,6 @@ namespace ArcadeGameProject
             gW.Visibility = Visibility.Visible;
             gW.Playername1 = player1;
             gW.Playername2 = player2;
-
             this.Close();
         }
 

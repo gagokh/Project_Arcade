@@ -41,7 +41,7 @@ namespace ArcadeGameProject
 
             else if (NamePlayer1.Text.Contains(" ") || (NamePlayer2.Text.Contains(" ")))
             {
-                MessageBox.Show("Naam mag spaties bevatten");
+                MessageBox.Show("Naam mag geen spaties bevatten");
             }
 
             else if (NamePlayer1.Text.Length > 10 || NamePlayer2.Text.Length > 10)
@@ -57,6 +57,8 @@ namespace ArcadeGameProject
                 String Name2 = NamePlayer2.Text;
                 GW.Playername1 = Name1;
                 GW.Playername2 = Name2;
+                GW.MW = this;
+                this.Visibility = Visibility.Hidden;
             }
 
    

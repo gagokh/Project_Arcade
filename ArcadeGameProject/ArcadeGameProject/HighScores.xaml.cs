@@ -52,7 +52,6 @@ namespace ArcadeGameProject
                             txtPlayerName.Text += "\r" + sdr["Player"].ToString();
                             txtScore.Text += "\r" + sdr["TheMax"].ToString();
                         }
-
                     }
                     connection.Close();
                 }
