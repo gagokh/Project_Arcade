@@ -33,13 +33,24 @@ namespace ArcadeGameProject
 
         private void OnClickPlay(object sender, RoutedEventArgs e)
         {
+            //wanneer 1 van de spelernaam velden leeg is wordt er een messagebox weergegeven
+            if (NamePlayer1.Text == string.Empty || NamePlayer2.Text == string.Empty)
+            {
+                MessageBox.Show("Voer een naam voor beide spelers in!");
+            }
+
+
             //opent de Gamewindow
-            GameWindow GW = new GameWindow();
-            GW.Visibility = Visibility.Visible;
-            String Name1 = NamePlayer1.Text;
-            String Name2 = NamePlayer2.Text;
-            GW.Playername1 = Name1;
-            GW.Playername2 = Name2;
+            else
+            {
+                GameWindow GW = new GameWindow();
+                GW.Visibility = Visibility.Visible;
+                String Name1 = NamePlayer1.Text;
+                String Name2 = NamePlayer2.Text;
+                GW.Playername1 = Name1;
+                GW.Playername2 = Name2;
+            }
+
         }
 
         private void OnClickExit(object sender, RoutedEventArgs e)
