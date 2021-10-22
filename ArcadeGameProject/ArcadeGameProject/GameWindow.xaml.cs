@@ -332,7 +332,7 @@ namespace ArcadeGameProject
                     string insert2 = "INSERT INTO Highscores (Highscore, Player) VALUES (@scoreP2, @Playername2)";
                     //string insert2 = "INSERT INTO Highscores (Highscore) VALUES (@scoreP1)";
 
-                    string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\Data\\Database1.mdf;Integrated Security=True";
+                    string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\GitProjectArcade\\ArcadeGameProject\\ArcadeGameProject\\Data\\Database1.mdf;Integrated Security=True";
                     
                     {
                     using (SqlConnection connection = new SqlConnection(connectionString))

@@ -29,8 +29,7 @@ namespace ArcadeGameProject
             InitializeComponent();
 
             //database connection
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\Data\\Database1.mdf;Integrated Security=True";
-
+            string connectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = D:\\GitProjectArcade\\ArcadeGameProject\\ArcadeGameProject\\Data\\Database1.mdf; Integrated Security = True";
             SqlConnection connection = new SqlConnection(connectionString);
 
             try //om een exception te vermijden doen we try catch. Error ontstaat alleen als db leeg is.
