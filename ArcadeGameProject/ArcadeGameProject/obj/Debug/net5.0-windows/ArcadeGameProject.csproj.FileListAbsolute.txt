@@ -103,7 +103,6 @@ D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ref\Ar
 D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.pdb
 D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.genruntimeconfig.cache
 <<<<<<< HEAD
-<<<<<<< HEAD
 D:\GitProjectArcade\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.exe
 D:\GitProjectArcade\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.deps.json
 D:\GitProjectArcade\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.runtimeconfig.json
@@ -143,7 +142,6 @@ D:\GitProjectArcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\PauseWindow.g.cs
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\PauseWindow.baml
 >>>>>>> pauseMenu
-=======
 C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.exe
 C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.deps.json
 C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\bin\Debug\net5.0-windows\ArcadeGameProject.runtimeconfig.json

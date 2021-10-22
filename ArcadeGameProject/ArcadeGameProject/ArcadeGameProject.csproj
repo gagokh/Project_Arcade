@@ -15,10 +15,8 @@
     <None Remove="plaatjes\background2.png" />
     <None Remove="plaatjes\backgroundwline.png" />
     <None Remove="plaatjes\blurred.png" />
-<<<<<<< HEAD
-=======
+	  
     <None Remove="plaatjes\enemy1.png" />
->>>>>>> Pauzemenu
     <None Remove="plaatjes\enemy2.png" />
     <None Remove="plaatjes\enemy3.png" />
     <None Remove="plaatjes\enemy33.png" />
@@ -40,10 +38,9 @@
     <Resource Include="plaatjes\background2.png" />
     <Resource Include="plaatjes\backgroundwline.png" />
     <Resource Include="plaatjes\blurred.png" />
-<<<<<<< HEAD
-=======
+
     <Resource Include="plaatjes\enemy1.png" />
->>>>>>> Pauzemenu
+
     <Resource Include="plaatjes\enemy2.png" />
     <Resource Include="plaatjes\enemy3.png" />
     <Resource Include="plaatjes\enemy33.png" />
