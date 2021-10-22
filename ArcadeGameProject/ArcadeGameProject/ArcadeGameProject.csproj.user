@@ -5,15 +5,9 @@
     <Compile Update="HighScores.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="PauzeMenu.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="HighScores.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="PauzeMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

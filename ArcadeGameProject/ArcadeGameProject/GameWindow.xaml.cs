@@ -584,8 +584,8 @@ namespace ArcadeGameProject
             Rectangle newEnemy = new Rectangle
             {
                 Tag = "Enemy",
-                Height = 40,
-                Width = 50,
+                Height = 50,
+                Width = 62,
                 Fill = vijanden
             };
 
