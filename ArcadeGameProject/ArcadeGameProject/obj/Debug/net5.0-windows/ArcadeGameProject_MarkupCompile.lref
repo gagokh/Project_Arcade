@@ -1,6 +1,13 @@
 ﻿
 
+<<<<<<< HEAD
 FD:\GitProjectArcade\ArcadeGameProject\ArcadeGameProject\GameWindow.xaml;;
 FD:\GitProjectArcade\ArcadeGameProject\ArcadeGameProject\HighScores.xaml;;
 FD:\GitProjectArcade\ArcadeGameProject\ArcadeGameProject\MainWindow.xaml;;
+=======
+FD:\Projectarcade\ArcadeGameProject\ArcadeGameProject\GameWindow.xaml;;
+FD:\Projectarcade\ArcadeGameProject\ArcadeGameProject\HighScores.xaml;;
+FD:\Projectarcade\ArcadeGameProject\ArcadeGameProject\MainWindow.xaml;;
+FD:\Projectarcade\ArcadeGameProject\ArcadeGameProject\PauseWindow.xaml;;
+>>>>>>> 8957e6a86f65012449968e90dc2d5eec4aee4f3f
 

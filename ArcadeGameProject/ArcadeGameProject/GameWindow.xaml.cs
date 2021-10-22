@@ -26,7 +26,7 @@ namespace ArcadeGameProject
     public partial class GameWindow : Window
     {
         # region Variabelen
-        private DispatcherTimer gameTimer = new DispatcherTimer();
+        public DispatcherTimer gameTimer = new DispatcherTimer();
         private List<Rectangle> itemsToRemove = new List<Rectangle>();
         private Random rand = new Random();
         private List<Enemies> EnemiesOnScreen = new List<Enemies>();
@@ -48,11 +48,10 @@ namespace ArcadeGameProject
         private int minutes;
         private int scoreP1=0;
         private int scoreP2=0;
-        private int P1bulletcount = 0;
-        private int P2bulletcount = 0;
+
+        public MainWindow MW;
 
         private bool moveLeft1, moveRight1, moveLeft2, moveRight2, Enemyspawn, Shootp1, Shootp2;
-
         public string Playername1;
         public string Playername2;
 
@@ -153,6 +152,19 @@ namespace ArcadeGameProject
             if (e.Key == Key.Up)
             {
                 CreateBullet(Player2);
+            }
+            if (e.Key == Key.Escape)
+            {
+                PauseWindow PW = new PauseWindow();
+                PW.Visibility = Visibility.Visible;
+                this.Visibility = Visibility.Hidden;
+                PW.GW = this;
+                PW.MW = MW;
+
+                PW.player1 = Playername1;
+                PW.player2 = Playername2;
+
+                gameTimer.Stop();
             }
         }
 
@@ -566,19 +578,26 @@ namespace ArcadeGameProject
             switch (enemytype)
             {
                 case Enemytype.Enemy1:
-                    vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/player3.png"));
+                    vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/enemy1.png"));
                     break;
                 case Enemytype.Enemy2:
                     vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/enemy2.png"));
                     break;
+                case Enemytype.Enemy3:
+                    vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/enemy33.png"));
+                    break;
+                case Enemytype.Enemy4:
+                    vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/enemy4.png"));
+                    break;
+
             }
 
             //de rectangle van enemy wordt hier gemaakt 
             Rectangle newEnemy = new Rectangle
             {
                 Tag = "Enemy",
-                Height = 40,
-                Width = 50,
+                Height = 50,
+                Width = 62,
                 Fill = vijanden
             };
 
