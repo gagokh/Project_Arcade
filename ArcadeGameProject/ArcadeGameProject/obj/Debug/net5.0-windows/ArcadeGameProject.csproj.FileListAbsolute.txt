@@ -102,3 +102,5 @@ D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\Arcade
 D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ref\ArcadeGameProject.dll
 D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.pdb
 D:\ArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.genruntimeconfig.cache
+D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\PauseWindow.g.cs
+D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\PauseWindow.baml

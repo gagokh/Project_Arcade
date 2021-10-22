@@ -40,6 +40,8 @@ namespace ArcadeGameProject
             String Name2 = NamePlayer2.Text;
             GW.Playername1 = Name1;
             GW.Playername2 = Name2;
+            GW.MW = this;
+            this.Visibility = Visibility.Hidden;
         }
 
         private void OnClickExit(object sender, RoutedEventArgs e)
@@ -53,7 +55,8 @@ namespace ArcadeGameProject
             //opent highscores 
             HighScores HS = new HighScores();
             HS.Visibility = Visibility.Visible;
-            //this.Visibility = Visibility.Hidden;
+            HS.MW = this;
+            this.Visibility = Visibility.Hidden;
         }
     }
 }
