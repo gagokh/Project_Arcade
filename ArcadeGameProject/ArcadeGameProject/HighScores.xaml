@@ -7,21 +7,18 @@
         mc:Ignorable="d"
         Title="HighScores" Height="500" Width="800">
     <Grid>
-        <!--<DataGrid Margin="0,24,0,207" Name="dtGrid" ItemsSource="{Binding}"></DataGrid>-->
-
         <Grid.Background>
             <ImageBrush ImageSource="Images/project_arcade_bg.png"/>
         </Grid.Background>
-        <StackPanel Background="#00020B" Margin="268,76,273,192" RenderTransformOrigin="0.5,0.5">
-            <TextBlock Text="HIGHSCORES" Margin="15" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#FFEB3B" FontSize="23" TextAlignment="Center" TextWrapping="Wrap" Width="179"/>
-            <TextBlock TextWrapping="Wrap" Margin="6,-4,10,10" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#fff" FontSize="13.9" Width="241"><Run Text="   "/><Run Text="    "/><Run Text=" 01 "/><Run Text="   Peter         50.000"/></TextBlock>
-            <TextBlock TextWrapping="Wrap" Margin="5,-1,10,10" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#fff" FontSize="13.9" Width="241"><Run Text="   "/><Run Text="    "/><Run Text=" 02"/><Run Text="   Peter         33.000"/></TextBlock>
-
-            <TextBlock TextWrapping="Wrap" Margin="5,-1,10,10" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#fff" FontSize="13.9" Width="241"><Run Text="   "/><Run Text="    "/><Run Text=" 03"/><Run Text="   Peter         22.000"/></TextBlock>
-            <TextBlock TextWrapping="Wrap" Margin="5,-1,10,10" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#fff" FontSize="13.9" Width="241"><Run Text="   "/><Run Text="    "/><Run Text=" 04"/><Run Text="   Peter         15.000"/></TextBlock>
-            <TextBlock TextWrapping="Wrap" Margin="5,-1,10,10" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#fff" FontSize="13.9" Width="241"><Run Text="   "/><Run Text="    "/><Run Text=" 05"/><Run Text="   Peter         12.000"/></TextBlock>
-            <!--<Button Content="CLOSE" FontWeight="DemiBold" Height="33" Foreground="#fff" Background="#000A22" Margin="366,250,380,201"/>-->
+        <StackPanel>
+            <Grid Background="#00020B" Margin="40" Height="342" Width="388">
+                <TextBlock TextWrapping="Wrap" FontFamily="pack://application:,,,/fonts/#Audiowide" FontSize="39"  Foreground="#FFEB3B" Text="HIGHSCORES" Margin="51,21,32,1"/>
+                <TextBlock x:Name="txtId" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#fff" FontSize="21" Width="63" Padding="1,7,1,1" Margin="52,56,0,10" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="txtPlayerName" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#fff"  FontSize="21" Width="156" Padding="1,7,1,1" Margin="129,56,0,10" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="txtScore" FontFamily="pack://application:,,,/fonts/#Audiowide" Foreground="#fff" FontSize="21" Width="95" Padding="1,7,1,1" Margin="0,56,34,10" HorizontalAlignment="Right"></TextBlock>
+                <Button x:Name="closeHS" Click="OnClickClose" Content="CLOSE" Background="#000A22" Foreground="#fff" FontSize="18" Margin="145,255,158,54" RenderTransformOrigin="0.632,0.574"></Button>
+            </Grid>
         </StackPanel>
-        
+
     </Grid>
 </Window>

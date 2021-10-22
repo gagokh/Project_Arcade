@@ -15,6 +15,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
+using System.Configuration;
+
+
 namespace ArcadeGameProject
 {
     /// <summary>
@@ -322,8 +325,59 @@ namespace ArcadeGameProject
             }//wave 3 (enemy 1, 2 en 3)
             else if (Backgroundseconds >= 126)//gameover
             {
+
+                if (Time == 0)
+                {
+                    string insert = "INSERT INTO Highscores (Highscore, Player) VALUES (@scoreP1, @Playername1)";
+                    string insert2 = "INSERT INTO Highscores (Highscore, Player) VALUES (@scoreP2, @Playername2)";
+                    //string insert2 = "INSERT INTO Highscores (Highscore) VALUES (@scoreP1)";
+
+                    string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\Data\\Database1.mdf;Integrated Security=True";
+                    
+                    {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        using (SqlCommand command = new SqlCommand(insert, connection))
+                        {
+
+                            if (string.IsNullOrEmpty(ScoreP1.Content.ToString()))
+                            {
+                                command.Parameters.AddWithValue("@scoreP1, @Playername1", DBNull.Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@scoreP1", (SqlDbType)scoreP1);
+                                command.Parameters.AddWithValue("@Playername1", Playername1);
+                            }
+                            //bgsec = *50 time = *1
+                            command.ExecuteNonQuery();
+                        }
+
+                        using (SqlCommand command = new SqlCommand(insert2, connection))
+                        {
+
+                            if (string.IsNullOrEmpty(ScoreP1.Content.ToString()))
+                            {
+                                command.Parameters.AddWithValue("@scoreP2, @Playername2", DBNull.Value);
+                            }
+                            else
+                            {
+                                command.Parameters.AddWithValue("@scoreP2", (SqlDbType)scoreP2);
+                                command.Parameters.AddWithValue("@Playername2", Playername2);
+                            }
+                            //bgsec = *50 time = *1
+                                
+                            command.ExecuteNonQuery();
+                            connection.Close();
+                        }
+                      }
+                  }
+                }
                 ScreenMessage.Content = "GameOver";
                 Enemyspawn = false;
+                gameTimer.Stop();
+
             } //GameOver
 
             if (Enemyspawn == true) //er wordt gekeken of er enmies gespawnd kunnen worden;
