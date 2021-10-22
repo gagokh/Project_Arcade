@@ -24,6 +24,8 @@ namespace ArcadeGameProject
     /// </summary>
     public partial class HighScores : Window
     {
+        public MainWindow MW;
+
         public HighScores()
         {
             InitializeComponent();
@@ -54,15 +56,17 @@ namespace ArcadeGameProject
                     }
                     connection.Close();
                 }
-        }
+            }
             catch
             {  
+
             }
           }
 
 
-    private void OnClickClose(object sender, RoutedEventArgs e)
+        private void OnClickClose(object sender, RoutedEventArgs e)
         {
+            MW.Visibility = Visibility.Visible;
             this.Close();
         }
 
