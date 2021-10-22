@@ -39,7 +39,7 @@ namespace ArcadeGameProject
                 MessageBox.Show("Voer een naam voor beide spelers in!");
             }
 
-            if (NamePlayer1.Text.Length > 10 || NamePlayer2.Text.Length > 10)
+            else if (NamePlayer1.Text.Length > 10 || NamePlayer2.Text.Length > 10)
             {
                 MessageBox.Show("Playername mag niet langer dan 10 tekens zijn");
             }
