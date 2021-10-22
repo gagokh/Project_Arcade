@@ -578,19 +578,26 @@ namespace ArcadeGameProject
             switch (enemytype)
             {
                 case Enemytype.Enemy1:
-                    vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/player3.png"));
+                    vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/enemy1.png"));
                     break;
                 case Enemytype.Enemy2:
                     vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/enemy2.png"));
                     break;
+                case Enemytype.Enemy3:
+                    vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/enemy33.png"));
+                    break;
+                case Enemytype.Enemy4:
+                    vijanden.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/enemy4.png"));
+                    break;
+
             }
 
             //de rectangle van enemy wordt hier gemaakt 
             Rectangle newEnemy = new Rectangle
             {
                 Tag = "Enemy",
-                Height = 40,
-                Width = 50,
+                Height = 50,
+                Width = 62,
                 Fill = vijanden
             };
 
