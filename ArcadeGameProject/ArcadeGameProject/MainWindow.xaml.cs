@@ -43,11 +43,9 @@ namespace ArcadeGameProject
             {
                 MessageBox.Show("Playername mag niet langer dan 10 tekens zijn");
             }
-
-            //opent de Gamewindow
-<<<<<<< HEAD
             else
             {
+                //opent de Gamewindow
                 GameWindow GW = new GameWindow();
                 GW.Visibility = Visibility.Visible;
                 String Name1 = NamePlayer1.Text;
@@ -56,20 +54,11 @@ namespace ArcadeGameProject
                 GW.Playername2 = Name2;
             }
 
-=======
-            GameWindow GW = new GameWindow();
-            GW.Visibility = Visibility.Visible;
-            String Name1 = NamePlayer1.Text;
-            String Name2 = NamePlayer2.Text;
-            GW.Playername1 = Name1;
-            GW.Playername2 = Name2;
-            GW.MW = this;
-            this.Visibility = Visibility.Hidden;
->>>>>>> pauseMenu
+   
         }
 
         private void OnClickExit(object sender, RoutedEventArgs e)
-        {   
+        {
             //sluit de applicatie 
             Application.Current.Shutdown();
         }
@@ -82,5 +71,5 @@ namespace ArcadeGameProject
             HS.MW = this;
             this.Visibility = Visibility.Hidden;
         }
+      }
     }
-}
