@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 
 using System.Configuration;
-
+using System.Media;
 
 namespace ArcadeGameProject
 {
@@ -44,7 +44,7 @@ namespace ArcadeGameProject
         private int EnemySpawnLimit = 50;
         private int Time;
         private int seconds;
-        private int Backgroundseconds;
+        private int Backgroundseconds = 120;
         private int minutes;
         private int scoreP1=0;
         private int scoreP2=0;
@@ -56,7 +56,17 @@ namespace ArcadeGameProject
         public string Playername2;
 
         public object Nameplayer1 { get; internal set; }
+
+        //MediaPlayer Sound1 = new MediaPlayer();
+
         #endregion
+
+        //private void MusicPlay1(object sender, RoutedEventArgs e)
+        //{
+        //    MediaPlayer Sound1 = new MediaPlayer();
+        //    Sound1.Open(new Uri(@"D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\music\\shrek8bit.wav"));
+        //    Sound1.Play();
+        //}
 
         public GameWindow()
         {
@@ -85,7 +95,6 @@ namespace ArcadeGameProject
             ImageBrush playerimage2 = new ImageBrush();
             playerimage2.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/player2.png"));
             Player2.Fill = playerimage2;
-
         }
 
         /// <summary>
@@ -114,7 +123,6 @@ namespace ArcadeGameProject
             {
                 moveRight2 = true;
             }
-            
         }
 
         /// <summary>
@@ -155,6 +163,7 @@ namespace ArcadeGameProject
             }
             if (e.Key == Key.Escape)
             {
+                gameTimer.Stop();
                 PauseWindow PW = new PauseWindow();
                 PW.Visibility = Visibility.Visible;
                 this.Visibility = Visibility.Hidden;
@@ -163,8 +172,6 @@ namespace ArcadeGameProject
 
                 PW.player1 = Playername1;
                 PW.player2 = Playername2;
-
-                gameTimer.Stop();
             }
         }
 
@@ -386,10 +393,26 @@ namespace ArcadeGameProject
                       }
                   }
                 }
-                ScreenMessage.Content = "GameOver";
                 Enemyspawn = false;
                 gameTimer.Stop();
+                ScreenMessage.Content = "GameOver";
 
+                if (scoreP1 > scoreP2)
+                {
+                    Winner.Content = Playername1 + " Wins With " + scoreP1 + " Points! ";
+                }
+
+                else if (scoreP2 > scoreP1)
+                {
+                    Winner.Content = Playername2 + " Wins With " + scoreP2 + " Points!";
+                }
+
+                else if (scoreP2 == scoreP1)
+                {
+                   Winner.Content = "Draw!";
+                }
+
+                Esc.Content = "Press ESC To continue";
             } //GameOver
 
             if (Enemyspawn == true) //er wordt gekeken of er enmies gespawnd kunnen worden;

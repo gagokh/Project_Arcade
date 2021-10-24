@@ -34,6 +34,7 @@
     <Resource Include="fonts\audiowide2.ttf" />
     <Resource Include="fonts\Oswald-Regular.ttf" />
     <Resource Include="images\project_arcade_bg.png" />
+    <Resource Include="music\shrek8bit.mp3" />
     <Resource Include="plaatjes\background1.jpg" />
     <Resource Include="plaatjes\background2.png" />
     <Resource Include="plaatjes\backgroundwline.png" />
