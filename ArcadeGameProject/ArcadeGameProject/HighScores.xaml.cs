@@ -42,13 +42,15 @@ namespace ArcadeGameProject
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = connection;
                     connection.Open();
+                    int rowCount = 0;
                     using (SqlDataReader sdr = cmd.ExecuteReader())
                     {
-
+                        //txtId.Text += "\r 1" + "\r 2" + "\r 3" + "\r 4" + "\r 5";
                         for (int i = 0; i < 5; i++)
                         {
                             sdr.Read();
-                            txtId.Text += "\r 0" + sdr["Id"].ToString();
+                            rowCount++;
+                            txtId.Text += "\r 0" + rowCount.ToString();
                             txtPlayerName.Text += "\r" + sdr["Player"].ToString();
                             txtScore.Text += "\r" + sdr["TheMax"].ToString();
                         }
