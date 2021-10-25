@@ -33,17 +33,39 @@ namespace ArcadeGameProject
 
         private void OnClickPlay(object sender, RoutedEventArgs e)
         {
-            //opent de Gamewindow
-            GameWindow GW = new GameWindow();
-            GW.Visibility = Visibility.Visible;
-            String Name1 = NamePlayer1.Text;
-            String Name2 = NamePlayer2.Text;
-            GW.Playername1 = Name1;
-            GW.Playername2 = Name2;
+            //wanneer 1 van de spelernaam velden leeg is wordt er een messagebox weergegeven
+            if (NamePlayer1.Text == string.Empty || NamePlayer2.Text == string.Empty)
+            {
+                MessageBox.Show("Voer een naam voor beide spelers in!");
+            }
+
+            else if (NamePlayer1.Text.Contains(" ") || (NamePlayer2.Text.Contains(" ")))
+            {
+                MessageBox.Show("Naam mag geen spaties bevatten");
+            }
+
+            else if (NamePlayer1.Text.Length > 10 || NamePlayer2.Text.Length > 10)
+            {
+                MessageBox.Show("Playername mag niet langer dan 10 tekens zijn");
+            }
+            else
+            {
+                //opent de Gamewindow
+                GameWindow GW = new GameWindow();
+                GW.Visibility = Visibility.Visible;
+                String Name1 = NamePlayer1.Text;
+                String Name2 = NamePlayer2.Text;
+                GW.Playername1 = Name1;
+                GW.Playername2 = Name2;
+                GW.MW = this;
+                this.Visibility = Visibility.Hidden;
+            }
+
+   
         }
 
         private void OnClickExit(object sender, RoutedEventArgs e)
-        {   
+        {
             //sluit de applicatie 
             Application.Current.Shutdown();
         }
@@ -53,7 +75,8 @@ namespace ArcadeGameProject
             //opent highscores 
             HighScores HS = new HighScores();
             HS.Visibility = Visibility.Visible;
-            //this.Visibility = Visibility.Hidden;
+            HS.MW = this;
+            this.Visibility = Visibility.Hidden;
         }
+      }
     }
-}
