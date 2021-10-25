@@ -182,9 +182,15 @@ namespace ArcadeGameProject
                 minutes++;
                 seconds = 0;
             }
+            if (seconds < 10)
+            {
+                Timer.Content = minutes + " : " + 0 + seconds;
+            }
+            else
+            {
+                Timer.Content = minutes + " : " + seconds;
+            }
 
-            Timer.Content = minutes + " : " + seconds;
-            //voeg hier een aanroep naar de merthode van de database toe zodra de gewillde tijd voorbij is 
             #endregion
 
             #region movement players + shooting players
