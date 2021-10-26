@@ -299,7 +299,7 @@ namespace ArcadeGameProject
                 enemySpawnCounter = 0;
 
             }//wave 3 aankondiging
-            else if (Backgroundseconds >= 56 && Backgroundseconds <= 0)//wave 3
+            else if (Backgroundseconds >= 0 && Backgroundseconds <= 56)//wave 3
             {
                 ScreenMessage.Content = "";
                 int b = rand.Next(1, 100);
