@@ -10,16 +10,19 @@
         <Rectangle x:Name="Player1" Height="80" Width="80" Fill="Orange" Canvas.Left="320" Canvas.Top="856"/>
         <Rectangle x:Name="Player2" Height="80" Width="80" Fill="Orange" Canvas.Top="845" Canvas.Left="960"/>
 
-        <Label x:Name="Scorep1" Foreground="White" FontSize="25" FontFamily="pack://application:,,,/fonts/#Audiowide" Canvas.Left="15" Content="Score " />
-        <Label x:Name="Scorep2" Foreground="White" FontSize="25" FontFamily="pack://application:,,,/fonts/#Audiowide" Content="Score " Canvas.Left="1155"/>
-        <Label x:Name="ScoreP1" Foreground="White" FontSize="25" FontFamily="pack://application:,,,/fonts/#Audiowide" Content="" Canvas.Left="15" Canvas.Top="40"/>
-        <Label x:Name="ScoreP2" Foreground="White" FontSize="25" FontFamily="pack://application:,,,/fonts/#Audiowide" Content="" Canvas.Left="1155"  Canvas.Top="40"/>
+        <Label x:Name="Scorep1" Foreground="White" FontSize="25" FontFamily="pack://application:,,,/fonts/#Audiowide" Canvas.Left="15" Content="Score: " />
+        <Label x:Name="Scorep2" Foreground="White" FontSize="25" FontFamily="pack://application:,,,/fonts/#Audiowide" Content="Score: " Canvas.Left="1155"/>
+        <Label x:Name="ScoreP1" Foreground="White" FontSize="25" FontFamily="pack://application:,,,/fonts/#Audiowide" Content="" Canvas.Left="15" Canvas.Top="30"/>
+        <Label x:Name="ScoreP2" Foreground="White" FontSize="25" FontFamily="pack://application:,,,/fonts/#Audiowide" Content="" Canvas.Left="1155"  Canvas.Top="30"/>
 
-        <Label x:Name="Timer" Foreground="White" FontFamily="pack://application:,,,/fonts/#Audiowide" Content="" Canvas.Left="609" FontSize="20"/>
-        <Label x:Name="ScreenMessage" Foreground="#FFEB3B" Content="" FontFamily="pack://application:,,,/fonts/#Audiowide" FontSize="100" Canvas.Top="169" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="1280" Canvas.Left="8"/>
-        <Label x:Name="Winner" Foreground="Cornsilk" Content="" FontSize="50" FontFamily="pack://application:,,,/fonts/#Audiowide" Canvas.Top="330" Canvas.Left="161" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="979"/>
+        <Label Foreground="White" FontFamily="pack://application:,,,/fonts/#Audiowide" Content="Time" Canvas.Left="560" FontSize="25"/>
+        <Label x:Name="Timer" Foreground="White" FontFamily="pack://application:,,,/fonts/#Audiowide" Content="" Canvas.Left="650" FontSize="25"/>
+        <Label x:Name="ScreenMessage" Foreground="#FFEB3B" Content="" FontFamily="pack://application:,,,/fonts/#Audiowide" FontSize="100" Canvas.Top="350" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="1280" Canvas.Left="8"/>
+       
+        <Label x:Name="GameOver" Foreground="#ffffff" Content="" FontFamily="pack://application:,,,/fonts/#Audiowide" FontSize="100" Canvas.Top="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="1280" Canvas.Left="8"/>
 
-        <Label x:Name="Esc" Foreground="Red" Content="" FontSize="50" FontFamily="pack://application:,,,/fonts/#Audiowide" Canvas.Top="424" Canvas.Left="157" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="979"/>
+        <Label x:Name="Winner" Foreground="Cornsilk" Content="" FontSize="50" FontFamily="pack://application:,,,/fonts/#Audiowide" Canvas.Top="280" Canvas.Left="161" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="979"/>
+        <Label x:Name="Esc" Foreground="#FFEB3B" Content="" FontSize="40" FontFamily="pack://application:,,,/fonts/#Audiowide" Canvas.Top="350" Canvas.Left="157" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="979"/>
 
         <!--<Button x:Name="MusicPlay" FontSize="20" Margin="0,0,0,10" Click="MusicPlay1">playmusic</Button>
         <Button x:Name="MusicStop" FontSize="20" Margin="0,0,0,10" Click="MusicStop2" Canvas.Left="2" Canvas.Top="59">Music Stop</Button>-->

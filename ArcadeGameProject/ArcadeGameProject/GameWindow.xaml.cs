@@ -230,7 +230,7 @@ namespace ArcadeGameProject
             //background seconds is de totale secondes die voorbij zijn;
             if (Backgroundseconds >= 0 && Backgroundseconds <= 2)
             {
-                ScreenMessage.Content = "Start Wave 1";
+                ScreenMessage.Content = "Wave 1";
                 Enemyspawn = false;
                 enemySpawnCounter = 0;
             } //wave 1 aankondiging
@@ -254,7 +254,7 @@ namespace ArcadeGameProject
             } //wave 1 (enemy 1)
             else if (Backgroundseconds >= 32 && Backgroundseconds <= 34)
             {
-                ScreenMessage.Content = "Start Wave 2";
+                ScreenMessage.Content = "Wave 2";
                 Enemyspawn = false;
                 enemySpawnCounter = 0;
             }//wave 2 aankondiging
@@ -295,7 +295,7 @@ namespace ArcadeGameProject
             }//wave 2 (enemy 1 en 2)
             else if (Backgroundseconds >= 64 && Backgroundseconds <= 66)
             {
-                ScreenMessage.Content = "Start Wave 3";
+                ScreenMessage.Content = "Wave 3";
                 Enemyspawn = false;
                 enemySpawnCounter = 0;
 
@@ -395,7 +395,7 @@ namespace ArcadeGameProject
                 }
                 Enemyspawn = false;
                 gameTimer.Stop();
-                ScreenMessage.Content = "GameOver";
+                GameOver.Content = "GameOver";
 
                 if (scoreP1 > scoreP2)
                 {
@@ -413,6 +413,21 @@ namespace ArcadeGameProject
                 }
 
                 Esc.Content = "Press ESC To continue";
+
+                for (int i = 0; i < EnemiesOnScreen.Count; i++)
+                {
+                    itemsToRemove.Add(EnemiesOnScreen[i].rectangle);
+                }
+
+
+                foreach (Rectangle x in MyCanvas.Children.OfType<Rectangle>())
+                {
+                    if ((string)x.Tag == "BulletPlayer" || (string)x.Tag == "BulletEnemy")
+                    {
+                        itemsToRemove.Add(x);
+                    }
+                }
+
             } //GameOver
 
             if (Enemyspawn == true) //er wordt gekeken of er enmies gespawnd kunnen worden;
