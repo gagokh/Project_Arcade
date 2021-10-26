@@ -687,7 +687,7 @@ namespace ArcadeGameProject
                     Height = 20,
                     Width = 5,  
                     Fill = Brushes.White,
-                    Stroke = Brushes.Red
+                    Stroke = Brushes.Green
                 };
                 Canvas.SetTop(newBullet, Canvas.GetTop(player) + player.Height + newBullet.Height);
                 Canvas.SetLeft(newBullet, Canvas.GetLeft(player) + player.Width / 2);

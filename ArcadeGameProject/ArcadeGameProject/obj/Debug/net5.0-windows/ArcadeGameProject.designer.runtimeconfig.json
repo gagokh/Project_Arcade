@@ -6,9 +6,9 @@
       "version": "5.0.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\Gebruiker\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Gebruiker\\.nuget\\packages",
-      "D:\\Visual_Studio\\SDK\\NuGetPackages"
+      "C:\\Users\\gamer\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\gamer\\.nuget\\packages",
+      "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
