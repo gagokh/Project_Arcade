@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 
 using System.Configuration;
-
+using System.Media;
 
 namespace ArcadeGameProject
 {
@@ -56,7 +56,17 @@ namespace ArcadeGameProject
         public string Playername2;
 
         public object Nameplayer1 { get; internal set; }
+
+        //MediaPlayer Sound1 = new MediaPlayer();
+
         #endregion
+
+        //private void MusicPlay1(object sender, RoutedEventArgs e)
+        //{
+        //    MediaPlayer Sound1 = new MediaPlayer();
+        //    Sound1.Open(new Uri(@"D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\music\\shrek8bit.wav"));
+        //    Sound1.Play();
+        //}
 
         public GameWindow()
         {
@@ -85,7 +95,6 @@ namespace ArcadeGameProject
             ImageBrush playerimage2 = new ImageBrush();
             playerimage2.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/player2.png"));
             Player2.Fill = playerimage2;
-
         }
 
         /// <summary>
@@ -114,7 +123,6 @@ namespace ArcadeGameProject
             {
                 moveRight2 = true;
             }
-            
         }
 
         /// <summary>
@@ -155,6 +163,7 @@ namespace ArcadeGameProject
             }
             if (e.Key == Key.Escape)
             {
+                gameTimer.Stop();
                 PauseWindow PW = new PauseWindow();
                 PW.Visibility = Visibility.Visible;
                 this.Visibility = Visibility.Hidden;
@@ -163,8 +172,6 @@ namespace ArcadeGameProject
 
                 PW.player1 = Playername1;
                 PW.player2 = Playername2;
-
-                gameTimer.Stop();
             }
         }
 
@@ -229,7 +236,7 @@ namespace ArcadeGameProject
             //background seconds is de totale secondes die voorbij zijn;
             if (Backgroundseconds >= 118 && Backgroundseconds <= 120)
             {
-                ScreenMessage.Content = "Start Wave 1";
+                ScreenMessage.Content = "Wave 1";
                 Enemyspawn = false;
                 enemySpawnCounter = 0;
             } //wave 1 aankondiging
@@ -253,7 +260,7 @@ namespace ArcadeGameProject
             } //wave 1 (enemy 1)
             else if (Backgroundseconds >= 86 && Backgroundseconds <= 88)
             {
-                ScreenMessage.Content = "Start Wave 2";
+                ScreenMessage.Content = "Wave 2";
                 Enemyspawn = false;
                 enemySpawnCounter = 0;
             }//wave 2 aankondiging
@@ -294,7 +301,7 @@ namespace ArcadeGameProject
             }//wave 2 (enemy 1 en 2)
             else if (Backgroundseconds >= 54 && Backgroundseconds <= 56)
             {
-                ScreenMessage.Content = "Start Wave 3";
+                ScreenMessage.Content = "Wave 3";
                 Enemyspawn = false;
                 enemySpawnCounter = 0;
 
@@ -392,9 +399,40 @@ namespace ArcadeGameProject
                       }
                   }
                 }
-                ScreenMessage.Content = "GameOver";
                 Enemyspawn = false;
                 gameTimer.Stop();
+                GameOver.Content = "GameOver";
+
+                if (scoreP1 > scoreP2)
+                {
+                    Winner.Content = Playername1 + " Wins With " + scoreP1 + " Points! ";
+                }
+
+                else if (scoreP2 > scoreP1)
+                {
+                    Winner.Content = Playername2 + " Wins With " + scoreP2 + " Points!";
+                }
+
+                else if (scoreP2 == scoreP1)
+                {
+                   Winner.Content = "Draw!";
+                }
+
+                Esc.Content = "Press ESC To continue";
+
+                for (int i = 0; i < EnemiesOnScreen.Count; i++)
+                {
+                    itemsToRemove.Add(EnemiesOnScreen[i].rectangle);
+                }
+
+
+                foreach (Rectangle x in MyCanvas.Children.OfType<Rectangle>())
+                {
+                    if ((string)x.Tag == "BulletPlayer" || (string)x.Tag == "BulletEnemy")
+                    {
+                        itemsToRemove.Add(x);
+                    }
+                }
 
             } //GameOver
 

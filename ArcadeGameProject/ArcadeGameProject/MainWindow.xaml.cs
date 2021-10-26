@@ -55,9 +55,8 @@ namespace ArcadeGameProject
                 GW.Playername2 = Name2;
                 GW.MW = this;
                 this.Visibility = Visibility.Hidden;
+                //this.Close();
             }
-
-   
         }
 
         private void OnClickExit(object sender, RoutedEventArgs e)
