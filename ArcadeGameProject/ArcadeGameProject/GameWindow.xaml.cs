@@ -44,14 +44,14 @@ namespace ArcadeGameProject
         private int EnemySpawnLimit = 50;
         private int Time;
         private int seconds;
-        private int Backgroundseconds;
-        private int minutes;
+        private int Backgroundseconds = 120;
+        private int minutes =2 ;
         private int scoreP1=0;
         private int scoreP2=0;
 
         public MainWindow MW;
 
-        private bool moveLeft1, moveRight1, moveLeft2, moveRight2, Enemyspawn, Shootp1, Shootp2;
+        private bool moveLeft1, moveRight1, moveLeft2, moveRight2, Enemyspawn;
         public string Playername1;
         public string Playername2;
 
@@ -184,15 +184,15 @@ namespace ArcadeGameProject
             if (Time == 50)
             {
                 //de gameengine wordt elke 0,02 seconde afgespeeld, en 50 * 0,02 = 1 seconde
-                seconds++;
-                Backgroundseconds++;
+                seconds--;
+                Backgroundseconds--;
                 Time = 0;
             }
-            if (seconds == 60)
+            if (seconds < 0)
             {
                 //60 seconde = 1minuut
-                minutes++;
-                seconds = 0;
+                minutes--;
+                seconds = 59;
             }
             if (seconds < 10)
             {
@@ -227,13 +227,13 @@ namespace ArcadeGameProject
             #region EnemySpawning
             enemySpawnCounter--;
             //background seconds is de totale secondes die voorbij zijn;
-            if (Backgroundseconds >= 0 && Backgroundseconds <= 2)
+            if (Backgroundseconds >= 118 && Backgroundseconds <= 120)
             {
                 ScreenMessage.Content = "Start Wave 1";
                 Enemyspawn = false;
                 enemySpawnCounter = 0;
             } //wave 1 aankondiging
-            else if (Backgroundseconds >= 2 && Backgroundseconds <= 32)
+            else if (Backgroundseconds >= 88 && Backgroundseconds <= 118)
             {
                 ScreenMessage.Content = "";
                 int b = rand.Next(1, 100);
@@ -251,13 +251,13 @@ namespace ArcadeGameProject
                 Enemyspawn = true;
 
             } //wave 1 (enemy 1)
-            else if (Backgroundseconds >= 32 && Backgroundseconds <= 34)
+            else if (Backgroundseconds >= 86 && Backgroundseconds <= 88)
             {
                 ScreenMessage.Content = "Start Wave 2";
                 Enemyspawn = false;
                 enemySpawnCounter = 0;
             }//wave 2 aankondiging
-            else if (Backgroundseconds >= 34 && Backgroundseconds <= 64)
+            else if (Backgroundseconds >= 56 && Backgroundseconds <= 86)
             {
                 ScreenMessage.Content = "";
                 int b = rand.Next(1, 100);
@@ -292,14 +292,14 @@ namespace ArcadeGameProject
                 Enemyspawn = true;
 
             }//wave 2 (enemy 1 en 2)
-            else if (Backgroundseconds >= 64 && Backgroundseconds <= 66)
+            else if (Backgroundseconds >= 54 && Backgroundseconds <= 56)
             {
                 ScreenMessage.Content = "Start Wave 3";
                 Enemyspawn = false;
                 enemySpawnCounter = 0;
 
             }//wave 3 aankondiging
-            else if (Backgroundseconds >= 66 && Backgroundseconds <= 126)//wave 3
+            else if (Backgroundseconds >= 56 && Backgroundseconds <= 0)//wave 3
             {
                 ScreenMessage.Content = "";
                 int b = rand.Next(1, 100);
@@ -341,7 +341,7 @@ namespace ArcadeGameProject
                 Enemyspawn = true;
 
             }//wave 3 (enemy 1, 2 en 3)
-            else if (Backgroundseconds >= 126)//gameover
+            else if (Backgroundseconds <= 0)//gameover
             {
 
                 if (Time == 0)
@@ -461,27 +461,34 @@ namespace ArcadeGameProject
                 //removal van de enemies met het optellen van punten
                 if (Canvas.GetTop(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].rectangle.Height > cHeight)
                 {
-                    itemsToRemove.Add(EnemiesOnScreen[i].rectangle);
-                    if (EnemiesOnScreen[i].WhichSide == side.left)
+                    if (EnemiesOnScreen[i].enemyType == Enemytype.Enemy4)
                     {
-                        scoreP1 = scoreP1 - (EnemiesOnScreen[i].score / 2);
-                        if (scoreP1 < 0)
-                        {
-                            scoreP1 = 0;
-                        }
-                        ScoreP1.Content = scoreP1;
+                        //alles behalve type 4 wordt in de else gedaan en afgespeeld
                     }
-                    else if (EnemiesOnScreen[i].WhichSide == side.right)
+                    else
                     {
-                        scoreP2 = scoreP2 - (EnemiesOnScreen[i].score/2);
-                        if (scoreP2 < 0)
+                        itemsToRemove.Add(EnemiesOnScreen[i].rectangle);
+                        if (EnemiesOnScreen[i].WhichSide == side.left)
                         {
-                            scoreP2 = 0;
+                            scoreP1 = scoreP1 - (EnemiesOnScreen[i].score / 2);
+                            if (scoreP1 < 0)
+                            {
+                                scoreP1 = 0;
+                            }
+                            ScoreP1.Content = scoreP1;
                         }
-                        ScoreP2.Content = scoreP2;
+                        else if (EnemiesOnScreen[i].WhichSide == side.right)
+                        {
+                            scoreP2 = scoreP2 - (EnemiesOnScreen[i].score / 2);
+                            if (scoreP2 < 0)
+                            {
+                                scoreP2 = 0;
+                            }
+                            ScoreP2.Content = scoreP2;
+                        }
+                        // de reden waarom we remove doen in de list is omdat de score dan gaat glitchen en niet meer correct doet
+                        EnemiesOnScreen.Remove(EnemiesOnScreen[i]);
                     }
-                    // de reden waarom we remove doen in de list is omdat de score dan gaat glitchen en niet meer correct doet
-                    EnemiesOnScreen.Remove(EnemiesOnScreen[i]);
                 }
             }
             # endregion
