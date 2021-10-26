@@ -21,10 +21,6 @@ namespace ArcadeGameProject
     /// </summary>
     public partial class MainWindow : Window
     {
-#region Variabelen
-        String Name1;
-        String Name2;
-        #endregion
 
         public MainWindow()
         {

@@ -1,25 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj": {}
+    "D:\\Nieuwe map\\Project_Arcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj": {}
   },
   "projects": {
-    "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj": {
+    "D:\\Nieuwe map\\Project_Arcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
+        "projectUniqueName": "D:\\Nieuwe map\\Project_Arcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
         "projectName": "ArcadeGameProject",
-        "projectPath": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
-        "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-        "outputPath": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\obj\\",
+        "projectPath": "D:\\Nieuwe map\\Project_Arcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
+        "packagesPath": "C:\\Users\\Alissa\\.nuget\\packages\\",
+        "outputPath": "D:\\Nieuwe map\\Project_Arcade\\ArcadeGameProject\\ArcadeGameProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Visual_Studio\\SDK\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Alissa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0-windows7.0"
@@ -67,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
