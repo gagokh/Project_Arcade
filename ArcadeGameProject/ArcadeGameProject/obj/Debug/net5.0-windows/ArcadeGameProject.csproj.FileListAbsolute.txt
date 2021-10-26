@@ -180,5 +180,10 @@ C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-
 C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.pdb
 C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.genruntimeconfig.cache
 >>>>>>> Pauzemenu
+<<<<<<< HEAD
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\PauseWindow.g.cs
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\PauseWindow.baml
+=======
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\PauseWindow.g.cs
+C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\PauseWindow.baml
+>>>>>>> kleurenemy
