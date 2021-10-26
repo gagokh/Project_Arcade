@@ -44,7 +44,7 @@ namespace ArcadeGameProject
         private int EnemySpawnLimit = 50;
         private int Time;
         private int seconds;
-        private int Backgroundseconds = 120;
+        private int Backgroundseconds;
         private int minutes;
         private int scoreP1=0;
         private int scoreP2=0;

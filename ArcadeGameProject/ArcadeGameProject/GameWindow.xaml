@@ -17,7 +17,7 @@
 
         <Label Foreground="White" FontFamily="pack://application:,,,/fonts/#Audiowide" Content="Time" Canvas.Left="560" FontSize="25"/>
         <Label x:Name="Timer" Foreground="White" FontFamily="pack://application:,,,/fonts/#Audiowide" Content="" Canvas.Left="650" FontSize="25"/>
-        <Label x:Name="ScreenMessage" Foreground="#FFEB3B" Content="" FontFamily="pack://application:,,,/fonts/#Audiowide" FontSize="100" Canvas.Top="350" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="1280" Canvas.Left="8"/>
+        <Label x:Name="ScreenMessage" Foreground="#ffff" Content="" FontFamily="pack://application:,,,/fonts/#Audiowide" FontSize="100" Canvas.Top="350" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="1280" Canvas.Left="8"/>
        
         <Label x:Name="GameOver" Foreground="#ffffff" Content="" FontFamily="pack://application:,,,/fonts/#Audiowide" FontSize="100" Canvas.Top="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="1280" Canvas.Left="8"/>
 
