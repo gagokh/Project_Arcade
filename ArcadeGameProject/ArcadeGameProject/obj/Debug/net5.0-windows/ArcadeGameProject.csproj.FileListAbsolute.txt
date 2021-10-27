@@ -185,3 +185,5 @@ D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.
 C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\PauseWindow.g.cs
 C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\PauseWindow.baml
 >>>>>>> kleurenemy
+D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ControlsWindow.g.cs
+D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ControlsWindow.baml
