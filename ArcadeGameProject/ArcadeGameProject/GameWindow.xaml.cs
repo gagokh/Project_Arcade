@@ -399,6 +399,7 @@ namespace ArcadeGameProject
                       }
                   }
                 }
+
                 Enemyspawn = false;
                 gameTimer.Stop();
                 GameOver.Content = "GameOver";
