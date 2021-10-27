@@ -10,6 +10,7 @@
     <None Remove="fonts\Audiowide-Regular.ttf" />
     <None Remove="fonts\audiowide2.ttf" />
     <None Remove="fonts\Oswald-Regular.ttf" />
+    <None Remove="images\Controls.png" />
     <None Remove="images\project_arcade_bg.png" />
     <None Remove="images\trophy.png" />
     <None Remove="plaatjes\background1.jpg" />
@@ -34,6 +35,7 @@
     <Resource Include="fonts\Audiowide-Regular.ttf" />
     <Resource Include="fonts\audiowide2.ttf" />
     <Resource Include="fonts\Oswald-Regular.ttf" />
+    <Resource Include="images\Controls.png" />
     <Resource Include="images\project_arcade_bg.png" />
     <Resource Include="images\trophy.png" />
     <Resource Include="music\shrek8bit.mp3" />

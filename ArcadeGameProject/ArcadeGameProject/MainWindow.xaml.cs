@@ -73,5 +73,11 @@ namespace ArcadeGameProject
             HS.MW = this;
             this.Visibility = Visibility.Hidden;
         }
-      }
-    }
+
+        private void Controls_Click(object sender, RoutedEventArgs e)
+        {
+            ControlsWindow CW = new ControlsWindow();
+            CW.Visibility = Visibility.Visible;
+        }
+     }
+   }
