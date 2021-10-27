@@ -205,6 +205,10 @@ namespace ArcadeGameProject
             {
                 Timer.Content = minutes + " : " + 0 + seconds;
             }
+            else if (minutes < 0)
+            {
+                Timer.Content = "0 : 0";
+            }
             else
             {
                 Timer.Content = minutes + " : " + seconds;

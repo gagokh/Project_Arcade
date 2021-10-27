@@ -187,3 +187,5 @@ C:\Users\gamer\Desktop\GIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-
 >>>>>>> kleurenemy
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ControlsWindow.g.cs
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ControlsWindow.baml
+D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ControlsWindow.g.cs
+D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ControlsWindow.baml
