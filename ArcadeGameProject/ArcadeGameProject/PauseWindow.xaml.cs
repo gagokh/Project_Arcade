@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,7 +25,6 @@ namespace ArcadeGameProject
 
         public string player1;
         public string player2;
-
         public PauseWindow()
         {
             InitializeComponent();
@@ -45,11 +45,13 @@ namespace ArcadeGameProject
             gW.Playername1 = player1;
             gW.Playername2 = player2;
             this.Close();
+            //this.Visibility = Visibility.Hidden;
         }
 
         private void OnClickGoMM(object sender, RoutedEventArgs e)
         {
-            MW.Visibility = Visibility.Visible;
+            MainWindow mW = new MainWindow();
+            mW.Visibility = Visibility.Visible; //nieuwe mainwindow aangemaakt anders was object 0
             GW.Close();
             this.Close();
         }

@@ -21,10 +21,6 @@ namespace ArcadeGameProject
     /// </summary>
     public partial class MainWindow : Window
     {
-#region Variabelen
-        String Name1;
-        String Name2;
-        #endregion
 
         public MainWindow()
         {
@@ -59,9 +55,8 @@ namespace ArcadeGameProject
                 GW.Playername2 = Name2;
                 GW.MW = this;
                 this.Visibility = Visibility.Hidden;
+                //this.Close();
             }
-
-   
         }
 
         private void OnClickExit(object sender, RoutedEventArgs e)

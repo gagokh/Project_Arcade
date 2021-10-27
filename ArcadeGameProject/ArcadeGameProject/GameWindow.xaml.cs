@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 
 using System.Configuration;
-
+using System.Media;
 
 namespace ArcadeGameProject
 {
@@ -44,19 +44,29 @@ namespace ArcadeGameProject
         private int EnemySpawnLimit = 50;
         private int Time;
         private int seconds;
-        private int Backgroundseconds;
-        private int minutes;
+        private int Backgroundseconds = 120;
+        private int minutes = 2;
         private int scoreP1=0;
         private int scoreP2=0;
 
         public MainWindow MW;
 
-        private bool moveLeft1, moveRight1, moveLeft2, moveRight2, Enemyspawn, Shootp1, Shootp2;
+        private bool moveLeft1, moveRight1, moveLeft2, moveRight2, Enemyspawn;
         public string Playername1;
         public string Playername2;
 
         public object Nameplayer1 { get; internal set; }
+
+        //MediaPlayer Sound1 = new MediaPlayer();
+
         #endregion
+
+        //private void MusicPlay1(object sender, RoutedEventArgs e)
+        //{
+        //    MediaPlayer Sound1 = new MediaPlayer();
+        //    Sound1.Open(new Uri(@"D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\music\\shrek8bit.wav"));
+        //    Sound1.Play();
+        //}
 
         public GameWindow()
         {
@@ -85,7 +95,6 @@ namespace ArcadeGameProject
             ImageBrush playerimage2 = new ImageBrush();
             playerimage2.ImageSource = new BitmapImage(new Uri("pack://application:,,,/plaatjes/player2.png"));
             Player2.Fill = playerimage2;
-
         }
 
         /// <summary>
@@ -114,7 +123,6 @@ namespace ArcadeGameProject
             {
                 moveRight2 = true;
             }
-            
         }
 
         /// <summary>
@@ -155,6 +163,7 @@ namespace ArcadeGameProject
             }
             if (e.Key == Key.Escape)
             {
+                gameTimer.Stop();
                 PauseWindow PW = new PauseWindow();
                 PW.Visibility = Visibility.Visible;
                 this.Visibility = Visibility.Hidden;
@@ -163,8 +172,6 @@ namespace ArcadeGameProject
 
                 PW.player1 = Playername1;
                 PW.player2 = Playername2;
-
-                gameTimer.Stop();
             }
         }
 
@@ -184,19 +191,25 @@ namespace ArcadeGameProject
             if (Time == 50)
             {
                 //de gameengine wordt elke 0,02 seconde afgespeeld, en 50 * 0,02 = 1 seconde
-                seconds++;
-                Backgroundseconds++;
+                seconds--;
+                Backgroundseconds--;
                 Time = 0;
             }
-            if (seconds == 60)
+            if (seconds < 0)
             {
                 //60 seconde = 1minuut
-                minutes++;
-                seconds = 0;
+                minutes--;
+                seconds = 59;
+            }
+            if (seconds < 10)
+            {
+                Timer.Content = minutes + " : " + 0 + seconds;
+            }
+            else
+            {
+                Timer.Content = minutes + " : " + seconds;
             }
 
-            Timer.Content = minutes + " : " + seconds;
-            //voeg hier een aanroep naar de merthode van de database toe zodra de gewillde tijd voorbij is 
             #endregion
 
             #region movement players + shooting players
@@ -221,13 +234,13 @@ namespace ArcadeGameProject
             #region EnemySpawning
             enemySpawnCounter--;
             //background seconds is de totale secondes die voorbij zijn;
-            if (Backgroundseconds >= 0 && Backgroundseconds <= 2)
+            if (Backgroundseconds >= 118 && Backgroundseconds <= 120)
             {
-                ScreenMessage.Content = "Start Wave 1";
+                ScreenMessage.Content = "Wave 1";
                 Enemyspawn = false;
                 enemySpawnCounter = 0;
             } //wave 1 aankondiging
-            else if (Backgroundseconds >= 2 && Backgroundseconds <= 32)
+            else if (Backgroundseconds >= 88 && Backgroundseconds <= 118)
             {
                 ScreenMessage.Content = "";
                 int b = rand.Next(1, 100);
@@ -245,13 +258,13 @@ namespace ArcadeGameProject
                 Enemyspawn = true;
 
             } //wave 1 (enemy 1)
-            else if (Backgroundseconds >= 32 && Backgroundseconds <= 34)
+            else if (Backgroundseconds >= 86 && Backgroundseconds <= 88)
             {
-                ScreenMessage.Content = "Start Wave 2";
+                ScreenMessage.Content = "Wave 2";
                 Enemyspawn = false;
                 enemySpawnCounter = 0;
             }//wave 2 aankondiging
-            else if (Backgroundseconds >= 34 && Backgroundseconds <= 64)
+            else if (Backgroundseconds >= 56 && Backgroundseconds <= 86)
             {
                 ScreenMessage.Content = "";
                 int b = rand.Next(1, 100);
@@ -286,14 +299,14 @@ namespace ArcadeGameProject
                 Enemyspawn = true;
 
             }//wave 2 (enemy 1 en 2)
-            else if (Backgroundseconds >= 64 && Backgroundseconds <= 66)
+            else if (Backgroundseconds >= 54 && Backgroundseconds <= 56)
             {
-                ScreenMessage.Content = "Start Wave 3";
+                ScreenMessage.Content = "Wave 3";
                 Enemyspawn = false;
                 enemySpawnCounter = 0;
 
             }//wave 3 aankondiging
-            else if (Backgroundseconds >= 66 && Backgroundseconds <= 126)//wave 3
+            else if (Backgroundseconds >= 0 && Backgroundseconds <= 56)//wave 3
             {
                 ScreenMessage.Content = "";
                 int b = rand.Next(1, 100);
@@ -335,7 +348,7 @@ namespace ArcadeGameProject
                 Enemyspawn = true;
 
             }//wave 3 (enemy 1, 2 en 3)
-            else if (Backgroundseconds >= 126)//gameover
+            else if (Backgroundseconds <= 0)//gameover
             {
 
                 if (Time == 0)
@@ -386,9 +399,40 @@ namespace ArcadeGameProject
                       }
                   }
                 }
-                ScreenMessage.Content = "GameOver";
                 Enemyspawn = false;
                 gameTimer.Stop();
+                GameOver.Content = "GameOver";
+
+                if (scoreP1 > scoreP2)
+                {
+                    Winner.Content = Playername1 + " Wins With " + scoreP1 + " Points! ";
+                }
+
+                else if (scoreP2 > scoreP1)
+                {
+                    Winner.Content = Playername2 + " Wins With " + scoreP2 + " Points!";
+                }
+
+                else if (scoreP2 == scoreP1)
+                {
+                   Winner.Content = "Draw!";
+                }
+
+                Esc.Content = "Press ESC To continue";
+
+                for (int i = 0; i < EnemiesOnScreen.Count; i++)
+                {
+                    itemsToRemove.Add(EnemiesOnScreen[i].rectangle);
+                }
+
+
+                foreach (Rectangle x in MyCanvas.Children.OfType<Rectangle>())
+                {
+                    if ((string)x.Tag == "BulletPlayer" || (string)x.Tag == "BulletEnemy")
+                    {
+                        itemsToRemove.Add(x);
+                    }
+                }
 
             } //GameOver
 
@@ -455,27 +499,34 @@ namespace ArcadeGameProject
                 //removal van de enemies met het optellen van punten
                 if (Canvas.GetTop(EnemiesOnScreen[i].rectangle) + EnemiesOnScreen[i].rectangle.Height > cHeight)
                 {
-                    itemsToRemove.Add(EnemiesOnScreen[i].rectangle);
-                    if (EnemiesOnScreen[i].WhichSide == side.left)
+                    if (EnemiesOnScreen[i].enemyType == Enemytype.Enemy4)
                     {
-                        scoreP1 = scoreP1 - (EnemiesOnScreen[i].score / 2);
-                        if (scoreP1 < 0)
-                        {
-                            scoreP1 = 0;
-                        }
-                        ScoreP1.Content = scoreP1;
+                        //alles behalve type 4 wordt in de else gedaan en afgespeeld
                     }
-                    else if (EnemiesOnScreen[i].WhichSide == side.right)
+                    else
                     {
-                        scoreP2 = scoreP2 - (EnemiesOnScreen[i].score/2);
-                        if (scoreP2 < 0)
+                        itemsToRemove.Add(EnemiesOnScreen[i].rectangle);
+                        if (EnemiesOnScreen[i].WhichSide == side.left)
                         {
-                            scoreP2 = 0;
+                            scoreP1 = scoreP1 - (EnemiesOnScreen[i].score / 2);
+                            if (scoreP1 < 0)
+                            {
+                                scoreP1 = 0;
+                            }
+                            ScoreP1.Content = scoreP1;
                         }
-                        ScoreP2.Content = scoreP2;
+                        else if (EnemiesOnScreen[i].WhichSide == side.right)
+                        {
+                            scoreP2 = scoreP2 - (EnemiesOnScreen[i].score / 2);
+                            if (scoreP2 < 0)
+                            {
+                                scoreP2 = 0;
+                            }
+                            ScoreP2.Content = scoreP2;
+                        }
+                        // de reden waarom we remove doen in de list is omdat de score dan gaat glitchen en niet meer correct doet
+                        EnemiesOnScreen.Remove(EnemiesOnScreen[i]);
                     }
-                    // de reden waarom we remove doen in de list is omdat de score dan gaat glitchen en niet meer correct doet
-                    EnemiesOnScreen.Remove(EnemiesOnScreen[i]);
                 }
             }
             # endregion
@@ -681,7 +732,7 @@ namespace ArcadeGameProject
                     Height = 20,
                     Width = 5,  
                     Fill = Brushes.White,
-                    Stroke = Brushes.Red
+                    Stroke = Brushes.Green
                 };
                 Canvas.SetTop(newBullet, Canvas.GetTop(player) + player.Height + newBullet.Height);
                 Canvas.SetLeft(newBullet, Canvas.GetLeft(player) + player.Width / 2);
