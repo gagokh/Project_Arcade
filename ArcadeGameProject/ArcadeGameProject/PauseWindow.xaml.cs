@@ -55,5 +55,11 @@ namespace ArcadeGameProject
             GW.Close();
             this.Close();
         }
+
+        private void OnClickGoCW(object sender, RoutedEventArgs e)
+        {
+            ControlsWindow CW = new ControlsWindow();
+            CW.Visibility = Visibility.Visible;
+        }
     }
 }

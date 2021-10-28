@@ -18,12 +18,16 @@ D:\GitProjectArcade\ArcadeGameProject\ArcadeGameProject\App.xaml
 GameWindow.xaml;HighScores.xaml;MainWindow.xaml;
 =======
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\App.xaml
-4743457883
+51925377777
 
-10489249140
+11-731298820
 1941636664285
+<<<<<<< HEAD
 GameWindow.xaml;HighScores.xaml;MainWindow.xaml;PauseWindow.xaml;
 >>>>>>> 8957e6a86f65012449968e90dc2d5eec4aee4f3f
+=======
+ControlsWindow.xaml;GameWindow.xaml;HighScores.xaml;MainWindow.xaml;PauseWindow.xaml;
+>>>>>>> c77923dacc18a476226b2fcff12859000f5752b5
 
 False
 

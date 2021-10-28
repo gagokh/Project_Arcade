@@ -1,0 +1,21 @@
+﻿<Window x:Class="ArcadeGameProject.ControlsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArcadeGameProject"
+        mc:Ignorable="d"
+        Title="ControlsWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/Controls.png"/>
+        </Grid.Background>
+
+        <StackPanel>
+            <Grid Height="400" Width="736">
+                <Button x:Name="closeCn" Click="OnClickClose"  Content="CLOSE" Background="#000A22" Foreground="#fff" FontSize="18" Margin="314,337,316,31"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
