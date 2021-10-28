@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\App.xaml
-51925377777
+61034919674
 
-13580902590
-1941636664285
-ControlsWindow.xaml;GameWindow.xaml;HighScores.xaml;MainWindow.xaml;PauseWindow.xaml;
+141802709534
+193-1891726104
+AdminWindow.xaml;ControlsWindow.xaml;GameWindow.xaml;HighScores.xaml;MainWindow.xaml;PauseWindow.xaml;
 
-False
+True
 
