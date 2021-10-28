@@ -28,7 +28,9 @@
                     <Button x:Name="playbutton"      FontFamily="pack://application:,,,/fonts/#Oswald" Background="#FFFFEB3B" Foreground="#000" FontSize="20" Margin="0,0,0,10" Click="OnClickPlay" >PLAY GAME</Button>
                     <Button x:Name="Highscorebutton" FontFamily="pack://application:,,,/fonts/#Oswald" Background="#FFFFEB3B" Foreground="#000" FontSize="20" Margin="0,0,0,10" Click="Highscorebutton_Click">HIGHSCORES</Button>
                     <Button x:Name="ControlsButton" FontFamily="pack://application:,,,/fonts/#Oswald" Background="#FFFFEB3B" Foreground="#000" FontSize="20" Margin="0,0,0,10" Click="Controls_Click">CONTROLS</Button>
-                    <Button x:Name="ExitGameButton"  FontFamily="pack://application:,,,/fonts/#Oswald" Background="#FFFFEB3B" Foreground="#000" FontSize="20" Click="OnClickExit">EXIT GAME</Button>
+                    <Button x:Name="ExitGameButton"  FontFamily="pack://application:,,,/fonts/#Oswald" Background="#FFFFEB3B" Foreground="#000" FontSize="20" Margin="0,0,0,10" Click="OnClickExit">EXIT GAME</Button>
+                    <Button x:Name="AdminButton"  FontFamily="pack://application:,,,/fonts/#Oswald" Background="#FFFFEB3B" Foreground="#000" FontSize="20" Margin="0,0,0,10" Click="OnClickAdmin">ADMIN</Button>
+                    <Button x:Name="ResetHigscoreButton"  FontFamily="pack://application:,,,/fonts/#Oswald" Background="#FFFFEB3B" Foreground="#000" FontSize="20" Margin="0,0,0,10" Click="OnClickReset">RESET HIGHSCORE</Button>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="0">
