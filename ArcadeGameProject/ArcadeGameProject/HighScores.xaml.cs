@@ -71,7 +71,6 @@ namespace ArcadeGameProject
             this.Close();
         }
 
-
         ////query
         //SqlCommand cmd = new SqlCommand("Select Player, Highscore from highscores_Table ", connection);
 
