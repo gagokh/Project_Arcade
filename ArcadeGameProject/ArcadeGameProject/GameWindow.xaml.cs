@@ -697,12 +697,12 @@ namespace ArcadeGameProject
             }
             else if (enemytype == Enemytype.Enemy3)
             {
-                enemy.score = 500;
+                enemy.score = 750;
                 enemy.speed = 5;
             }
             else if (enemytype == Enemytype.Enemy4)
             {
-                enemy.score = 1000;
+                enemy.score = 2000;
                 enemy.speed = 20;
             }
             EnemiesOnScreen.Add(enemy);
