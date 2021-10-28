@@ -189,3 +189,7 @@ D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\Co
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ControlsWindow.baml
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ControlsWindow.g.cs
 D:\Nieuwe map\Project_Arcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ControlsWindow.baml
+D:\GitProjectArcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ControlsWindow.g.cs
+D:\GitProjectArcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\PauseWindow.g.cs
+D:\GitProjectArcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ControlsWindow.baml
+D:\GitProjectArcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\PauseWindow.baml
