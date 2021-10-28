@@ -459,11 +459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitProjectArcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
+      "projectUniqueName": "D:\\ProjectArcadeGIT\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
       "projectName": "ArcadeGameProject",
-      "projectPath": "D:\\GitProjectArcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
+      "projectPath": "D:\\ProjectArcadeGIT\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
       "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
-      "outputPath": "D:\\GitProjectArcade\\ArcadeGameProject\\ArcadeGameProject\\obj\\",
+      "outputPath": "D:\\ProjectArcadeGIT\\ArcadeGameProject\\ArcadeGameProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Patrick\\AppData\\Roaming\\NuGet\\NuGet.Config",
