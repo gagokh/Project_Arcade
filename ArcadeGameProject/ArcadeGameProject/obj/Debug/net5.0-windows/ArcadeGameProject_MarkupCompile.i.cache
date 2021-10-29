@@ -4,25 +4,17 @@
 winexe
 C#
 .cs
-D:\ProjectArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\
+D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\
 ArcadeGameProject
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-<<<<<<< HEAD
 D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\App.xaml
 61034919674
 
 141802709534
-193-1891726104
-=======
-D:\ProjectArcadeGIT\ArcadeGameProject\ArcadeGameProject\App.xaml
-61034919674
-
-141802709534
-1941774876247
->>>>>>> 5cad24c8e283094df05e62295e206ece08e8c216
+1941636664285
 AdminWindow.xaml;ControlsWindow.xaml;GameWindow.xaml;HighScores.xaml;MainWindow.xaml;PauseWindow.xaml;
 
-True
+False
 
