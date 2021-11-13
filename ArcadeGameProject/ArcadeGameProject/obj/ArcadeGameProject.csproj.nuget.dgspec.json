@@ -1,31 +1,41 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ProjectArcadeGIT\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj": {}
+    "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj": {}
   },
   "projects": {
-    "D:\\ProjectArcadeGIT\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj": {
+    "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ProjectArcadeGIT\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
+        "projectUniqueName": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
         "projectName": "ArcadeGameProject",
-        "projectPath": "D:\\ProjectArcadeGIT\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
-        "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
-        "outputPath": "D:\\ProjectArcadeGIT\\ArcadeGameProject\\ArcadeGameProject\\obj\\",
+        "projectPath": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\ArcadeGameProject.csproj",
+        "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
+        "outputPath": "D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+<<<<<<< HEAD
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Patrick\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+=======
+          "D:\\Visual_Studio\\SDK\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> 1e4efe9d0d83b1acb7adcb47c430e297b22ac2b4
         ],
         "originalTargetFrameworks": [
           "net5.0-windows7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0-windows7.0": {

@@ -234,3 +234,5 @@ D:\ProjectArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows
 D:\ProjectArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\ArcadeGameProject.genruntimeconfig.cache
 D:\ProjectArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\AdminWindow.g.cs
 D:\ProjectArcadeGIT\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\AdminWindow.baml
+D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\AdminWindow.g.cs
+D:\Projectarcade\ArcadeGameProject\ArcadeGameProject\obj\Debug\net5.0-windows\AdminWindow.baml
