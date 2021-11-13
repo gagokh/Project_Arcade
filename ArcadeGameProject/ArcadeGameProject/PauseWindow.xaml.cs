@@ -28,6 +28,7 @@ namespace ArcadeGameProject
         public PauseWindow()
         {
             InitializeComponent();
+            this.WindowState = WindowState.Maximized;
         }
 
         private void OnClickResume(object sender, RoutedEventArgs e)
@@ -41,6 +42,7 @@ namespace ArcadeGameProject
         {
             GW.Close();
             GameWindow gW = new GameWindow();
+            gW.WindowState = WindowState.Maximized;
             gW.Visibility = Visibility.Visible;
             gW.Playername1 = player1;
             gW.Playername2 = player2;
@@ -51,6 +53,7 @@ namespace ArcadeGameProject
         private void OnClickGoMM(object sender, RoutedEventArgs e)
         {
             MainWindow mW = new MainWindow();
+            mW.WindowState = WindowState.Maximized;
             mW.Visibility = Visibility.Visible; //nieuwe mainwindow aangemaakt anders was object 0
             GW.Close();
             this.Close();
@@ -59,6 +62,7 @@ namespace ArcadeGameProject
         private void OnClickGoCW(object sender, RoutedEventArgs e)
         {
             ControlsWindow CW = new ControlsWindow();
+            CW.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             CW.Visibility = Visibility.Visible;
         }
     }

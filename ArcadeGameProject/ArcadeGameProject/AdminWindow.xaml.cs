@@ -23,6 +23,8 @@ namespace ArcadeGameProject
         public Window1()
         {
             InitializeComponent();
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
         }
 
         private void BtnSubmit_Click(object sender, RoutedEventArgs e)

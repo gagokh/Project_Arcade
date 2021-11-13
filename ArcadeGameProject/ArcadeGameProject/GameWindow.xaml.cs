@@ -41,7 +41,7 @@ namespace ArcadeGameProject
         private int Innerwall = 640;
         private int outerwall = 1280;
         private int enemySpawnCounter = 50;
-        private int EnemySpawnLimit = 50;
+        private int EnemySpawnLimit = 30;
         private int Time;
         private int seconds;
         private int Backgroundseconds = 120;
@@ -64,13 +64,14 @@ namespace ArcadeGameProject
         //private void MusicPlay1(object sender, RoutedEventArgs e)
         //{
         //    MediaPlayer Sound1 = new MediaPlayer();
-        //    Sound1.Open(new Uri(@"D:\\Projectarcade\\ArcadeGameProject\\ArcadeGameProject\\music\\shrek8bit.wav"));
+        //    Sound1.Open(new Uri(@"D:\ProjectArcadeGIT\ArcadeGameProject\ArcadeGameProject\music\shrek8bit.wav"));
         //    Sound1.Play();
         //}
 
         public GameWindow()
         {
             InitializeComponent();
+            this.WindowState = WindowState.Maximized;
             MyCanvas.Focus();
 
             //timer setup

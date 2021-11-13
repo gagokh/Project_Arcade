@@ -22,6 +22,7 @@ namespace ArcadeGameProject
         public ControlsWindow()
         {
             InitializeComponent();
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
         private void OnClickClose(object sender, RoutedEventArgs e)

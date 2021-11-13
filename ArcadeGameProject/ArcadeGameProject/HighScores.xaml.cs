@@ -29,6 +29,7 @@ namespace ArcadeGameProject
         public HighScores()
         {
             InitializeComponent();
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
             //database connection
             string connectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = D:\\GitProjectArcade\\ArcadeGameProject\\ArcadeGameProject\\Data\\Database1.mdf; Integrated Security = True";

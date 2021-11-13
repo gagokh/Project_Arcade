@@ -26,6 +26,7 @@ namespace ArcadeGameProject
         public MainWindow()
         {
             InitializeComponent();
+            this.WindowState = WindowState.Maximized;
             ResetHigscoreButton.Visibility = Visibility.Hidden;
         }
 
